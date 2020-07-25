@@ -8,6 +8,7 @@ TagManager:
   - Exit
   - Friend
   - Pit
+  - Metal
   layers:
   - Default
   - TransparentFX
