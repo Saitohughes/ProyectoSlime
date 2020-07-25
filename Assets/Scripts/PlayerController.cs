@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     [SerializeField] string instruction;
     GameObject placeholder;
+
     void Start()
     {
         instruction = "null";
