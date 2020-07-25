@@ -15,7 +15,7 @@ public class BoxMove : MonoBehaviour
     {
           myCollider = GetComponent<BoxCollider>();
           playerMov = FindObjectOfType<PlayerMovement>();
-          myRig = GetComponent<Rigidbody>();
+          //myRig = GetComponent<Rigidbody>();
     }
     
     // Update is called once per frame
@@ -26,23 +26,17 @@ public class BoxMove : MonoBehaviour
 
     public void Grab(GameObject player) //metodo que se encarga de agarrar la caja
     {
-        if (player != null && myRig != null)
+        if (player != null)
         {
             gameObject.transform.parent = player.transform;
             playerMov.ChangeSpeed(2);
-            gameObject.layer = 9; 
-            //myRig.isKinematic = false;
+          
         }
     }
 
     public void NoGrab() //funcion que se encarga de soltar la caja
     {
-        if(myRig != null) 
-        {
-            gameObject.transform.parent = null;
-            playerMov.RestoreSpeed();
-            gameObject.layer = 11;
-            //myRig.isKinematic = true;
-        }
+        gameObject.transform.parent = null;
+        playerMov.RestoreSpeed();
     }
 }

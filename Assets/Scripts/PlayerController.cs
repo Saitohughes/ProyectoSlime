@@ -34,14 +34,19 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionStay(Collision collision)
     {
+        
+        
+
+    }
+   
+    private void OnTriggerStay(Collider collision)
+    {
         if (collision.gameObject.CompareTag("Box") && Input.GetKeyDown(KeyCode.P))
         {
             collision.gameObject.GetComponent<BoxMove>().Grab(gameObject);
             instruction = "Box";
             placeholder = collision.gameObject;
         }
-        
-
     }
-    
+
 }
