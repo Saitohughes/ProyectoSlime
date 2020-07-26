@@ -15,6 +15,7 @@ public class BoxMove : MonoBehaviour
     {
           myCollider = GetComponent<BoxCollider>();
           playerMov = FindObjectOfType<PlayerMovement>();
+        
           //myRig = GetComponent<Rigidbody>();
     }
     
@@ -30,7 +31,7 @@ public class BoxMove : MonoBehaviour
         {
             gameObject.transform.parent = player.transform;
             playerMov.ChangeSpeed(2);
-          
+            gameObject.layer = 10;
         }
     }
 
@@ -38,5 +39,6 @@ public class BoxMove : MonoBehaviour
     {
         gameObject.transform.parent = null;
         playerMov.RestoreSpeed();
+        gameObject.layer = 11;
     }
 }
