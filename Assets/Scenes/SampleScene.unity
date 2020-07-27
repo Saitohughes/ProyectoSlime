@@ -1614,7 +1614,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 295cbe68158bde04da28785dd7d0d44c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  instruction: 
+  instruction: Null
   time: 0
   interact: {fileID: 0}
   armature: {fileID: 103654331}

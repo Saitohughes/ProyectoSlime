@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-        instruction = "null";
+        instruction = "Null";
         time = 0;
     }
 
