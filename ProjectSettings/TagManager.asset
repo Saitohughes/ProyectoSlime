@@ -10,6 +10,7 @@ TagManager:
   - Pit
   - Metal
   - Key
+  - Bell
   layers:
   - Default
   - TransparentFX

@@ -102,6 +102,12 @@ public class PlayerController : MonoBehaviour
                 collision.gameObject.GetComponent<KeyMechanism>().ActivateDoor();
                 instruction = "Null";
             }
+            else if(collision.gameObject.CompareTag("Bell") && acction)
+            {
+                collision.gameObject.GetComponent<Bell>().CallGuard();
+                instruction = "Null";
+                collision.gameObject.layer = 9;
+            }
         }
     }
 
