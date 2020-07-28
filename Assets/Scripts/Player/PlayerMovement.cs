@@ -26,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
    
     void FixedUpdate()
     {
-        mov = new Vector3(joystick.Horizontal * speed, 0, joystick.Vertical* speed); //le damos el valor al vector con respecto a las direcciones
+        mov = new Vector3(joystick.Horizontal * speed, 0, joystick.Vertical * speed); //le damos el valor al vector con respecto a las direcciones
         myRig.velocity = mov; //aqui usamos Velocity para darle el vector que ya definimos
     }
 
