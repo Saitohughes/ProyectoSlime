@@ -1,14 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.UIElements;
 using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
     [SerializeField] GameObject friend;
     [SerializeField] GameObject enemy;
+
+
     void Start()
     {
-        friend = GameObject.FindGameObjectWithTag("Friend");
+       friend = GameObject.FindGameObjectWithTag("Friend");
     }
 
     // Update is called once per frame
@@ -26,5 +29,9 @@ public class GameController : MonoBehaviour
         {
             enemy.GetComponent<Bell>().CallGuard();
         }
+    }
+    public void LayerChange()
+    {
+
     }
 }

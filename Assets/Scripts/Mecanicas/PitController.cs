@@ -22,6 +22,7 @@ public class PitController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Box"))
         {
+            other.gameObject.GetComponent<BoxMove>().NoGrab();
             other.gameObject.SetActive(false);
             boxField.SetActive(true);
             myCol.enabled = false;

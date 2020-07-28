@@ -32,8 +32,6 @@ public class PlayerController : MonoBehaviour
              {
                 interact.GetComponent<BoxMove>().NoGrab();
                 instruction = "Null";
-               
-
              }
         }
 
@@ -48,6 +46,7 @@ public class PlayerController : MonoBehaviour
             if (time >= meltTime)
             {
                 interact.GetComponent<MetalBox>().Melt();
+                acction = false;
             }
         }
 
@@ -101,12 +100,14 @@ public class PlayerController : MonoBehaviour
             {
                 collision.gameObject.GetComponent<KeyMechanism>().ActivateDoor();
                 instruction = "Null";
+                acction = false;
             }
             else if(collision.gameObject.CompareTag("Bell") && acction)
             {
                 collision.gameObject.GetComponent<Bell>().CallGuard();
                 instruction = "Null";
                 collision.gameObject.layer = 9;
+                acction = false;
             }
         }
     }
