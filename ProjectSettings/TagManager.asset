@@ -9,6 +9,7 @@ TagManager:
   - Friend
   - Pit
   - Metal
+  - Key
   layers:
   - Default
   - TransparentFX

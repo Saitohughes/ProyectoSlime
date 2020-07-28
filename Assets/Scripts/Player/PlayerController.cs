@@ -97,6 +97,11 @@ public class PlayerController : MonoBehaviour
                 instruction = "Metal";
                 armature.layer = 9;
             }
+            else if(collision.gameObject.CompareTag("Key") && acction)
+            {
+                collision.gameObject.GetComponent<KeyMechanism>().ActivateDoor();
+                instruction = "Null";
+            }
         }
     }
 
