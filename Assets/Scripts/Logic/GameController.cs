@@ -5,6 +5,7 @@ using UnityEngine;
 public class GameController : MonoBehaviour
 {
     [SerializeField] GameObject friend;
+    [SerializeField] GameObject enemy;
     void Start()
     {
         friend = GameObject.FindGameObjectWithTag("Friend");
@@ -20,6 +21,10 @@ public class GameController : MonoBehaviour
         if (Input.GetKey(KeyCode.E))
         {
             friend.GetComponent<FriendAI>().StateModification(2);
+        }
+        if (Input.GetKey(KeyCode.T))
+        {
+            enemy.GetComponent<Bell>().CallGuard();
         }
     }
 }
