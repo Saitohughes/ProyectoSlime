@@ -1,6 +1,8 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class PlayerController : MonoBehaviour
 {
@@ -9,6 +11,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float time;
     [SerializeField] GameObject interact,armature;
     [SerializeField] float meltTime;
+
+    public bool acction;
+    public Joystick joystick;
 
     void Start()
     {
@@ -23,18 +28,18 @@ public class PlayerController : MonoBehaviour
 
         if (instruction.Equals("Box") && interact != null)
         {
-             if (Input.GetKeyUp(KeyCode.P) )
+             if ( !acction )
              {
                 interact.GetComponent<BoxMove>().NoGrab();
                 instruction = "Null";
                
 
-            }
+             }
         }
 
         if (instruction.Equals("Metal") && interact != null)
         {
-            if (Input.GetKeyUp(KeyCode.P))
+            if (!acction)
             {
                 instruction = "Null";
                
@@ -52,14 +57,17 @@ public class PlayerController : MonoBehaviour
             time = 0;
             armature.layer = 8;
 
-            if (Input.GetAxis("Vertical") > 0)
+            if (joystick.Vertical > 0)
                 OnRotate(0);
-            if (Input.GetAxis("Vertical") < 0)
+            if (joystick.Vertical < 0)
                 OnRotate(180);
-            if (Input.GetAxis("Horizontal") > 0)
+            if (joystick.Horizontal > 0)
                 OnRotate(90);
-            if (Input.GetAxis("Horizontal") < 0)
+            if (joystick.Horizontal < 0)
                 OnRotate(270);
+
+            Debug.Log("Horizontal: " + joystick.Horizontal);
+            Debug.Log("Vertical: " + joystick.Vertical);
         }
 
     }
@@ -75,7 +83,7 @@ public class PlayerController : MonoBehaviour
         {
            
             //interact = collision.gameObject;
-            if (collision.gameObject.CompareTag("Box") && Input.GetKeyDown(KeyCode.P))
+            if (collision.gameObject.CompareTag("Box") && acction )
             {
                 interact = collision.gameObject;
                 interact.GetComponent<BoxMove>().Grab(gameObject);
@@ -83,7 +91,7 @@ public class PlayerController : MonoBehaviour
                 armature.layer = 9;
 
             }
-            else if (collision.gameObject.CompareTag("Metal") && Input.GetKeyDown(KeyCode.P))
+            else if (collision.gameObject.CompareTag("Metal") && acction )
             {
                 interact = collision.gameObject;
                 instruction = "Metal";
@@ -96,5 +104,13 @@ public class PlayerController : MonoBehaviour
     {
         armature.transform.localRotation = Quaternion.Euler( new Vector3(0, RotationPosition, 0));
 
+    }
+
+    public void myAcction()
+    {
+        if (acction == false)
+            acction = true;
+        else if (acction == true)
+            acction = false;
     }
 }

@@ -17,6 +17,6 @@ public class PathFinder : MonoBehaviour
 
     void Update()
     {
-        agent.SetDestination(target.position);
+       agent.SetDestination(target.position);
     }
 }

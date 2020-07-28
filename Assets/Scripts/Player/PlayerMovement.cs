@@ -7,6 +7,9 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] float speed, originalSpeed; //variabñle que va a controlar la velocidad del personaje
     [SerializeField] Rigidbody myRig; //componente necesaria
+
+    public Joystick joystick;
+
     Vector3 mov; //vector de movimiento
     // Start is called before the first frame update
     private void Awake()
@@ -23,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
    
     void FixedUpdate()
     {
-        mov = new Vector3(Input.GetAxis("Horizontal") * speed, 0, Input.GetAxis("Vertical") * speed); //le damos el valor al vector con respecto a las direcciones
+        mov = new Vector3(joystick.Horizontal * speed, 0, joystick.Vertical* speed); //le damos el valor al vector con respecto a las direcciones
         myRig.velocity = mov; //aqui usamos Velocity para darle el vector que ya definimos
     }
 
