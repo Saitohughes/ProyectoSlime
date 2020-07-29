@@ -55,14 +55,16 @@ public class PlayerController : MonoBehaviour
             interact = null;
             time = 0;
             armature.layer = 8;
-
-            if (joystick.Vertical > 0)
+            float vertical = joystick.Vertical;
+            float horizontal = joystick.Horizontal;
+            
+            if (vertical > 0 &&  Math.Abs(vertical) > Math.Abs(horizontal))
                 OnRotate(0);
-            if (joystick.Vertical < 0)
+            if (vertical < 0 && Math.Abs(vertical) > Math.Abs(horizontal))
                 OnRotate(180);
-            if (joystick.Horizontal > 0)
+            if (horizontal > 0 && Math.Abs(horizontal) > Math.Abs(vertical))
                 OnRotate(90);
-            if (joystick.Horizontal < 0)
+            if (horizontal < 0 && Math.Abs(horizontal) > Math.Abs(vertical))
                 OnRotate(270);
 
             Debug.Log("Horizontal: " + joystick.Horizontal);
