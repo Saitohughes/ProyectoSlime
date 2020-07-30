@@ -67,8 +67,6 @@ public class PlayerController : MonoBehaviour
             if (horizontal < 0 && Math.Abs(horizontal) > Math.Abs(vertical))
                 OnRotate(270);
 
-            Debug.Log("Horizontal: " + joystick.Horizontal);
-            Debug.Log("Vertical: " + joystick.Vertical);
         }
 
     }
