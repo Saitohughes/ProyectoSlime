@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 1193068986740370424}
   - component: {fileID: 1193068986740370423}
   - component: {fileID: 1193068986740370422}
-  - component: {fileID: 1193068986740370421}
   - component: {fileID: 1193068986740370426}
+  - component: {fileID: 1193068986740370421}
   - component: {fileID: 1193068986740370427}
   m_Layer: 8
   m_Name: slime
@@ -97,22 +97,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1193068986740370421
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1193068986740370420}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a2029c827103e2438dd085d646d1118, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5.5
-  originalSpeed: 0
-  myRig: {fileID: 0}
-  joystick: {fileID: 0}
 --- !u!54 &1193068986740370426
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -129,6 +113,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &1193068986740370421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1193068986740370420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a2029c827103e2438dd085d646d1118, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5.5
+  originalSpeed: 0
+  myRig: {fileID: 0}
+  joystick: {fileID: 0}
 --- !u!114 &1193068986740370427
 MonoBehaviour:
   m_ObjectHideFlags: 0
