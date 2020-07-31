@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class GameController : MonoBehaviour
 {
     [SerializeField] FriendAI friend;
-    [SerializeField] GameObject win, lost;
+    [SerializeField] GameObject win, lost, buttom;
     [SerializeField] Text timeCount;
     [SerializeField] List<GameObject> enemys;
     [SerializeField] float timeStart, time;
@@ -80,10 +80,12 @@ public class GameController : MonoBehaviour
         if (friend.Stop())
         {
             win.SetActive(true);
+            buttom.SetActive(true);
         }
         else
         {
             lost.SetActive(true);
+            buttom.SetActive(true);
         }  
     }
     void Update()
