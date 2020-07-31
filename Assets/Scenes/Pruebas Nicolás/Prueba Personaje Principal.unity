@@ -846,7 +846,7 @@ Transform:
   - {fileID: 14254641}
   - {fileID: 860568245}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &535103020
 GameObject:
@@ -2480,6 +2480,7 @@ MonoBehaviour:
   friend: {fileID: 0}
   win: {fileID: 597593763}
   lost: {fileID: 882989994}
+  buttom: {fileID: 0}
   timeCount: {fileID: 158808855}
   enemys: []
   timeStart: 0
@@ -2729,7 +2730,7 @@ Transform:
   - {fileID: 1457378907}
   - {fileID: 691366547}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1191251260
 GameObject:
@@ -3703,6 +3704,80 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1541261537}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1587868148
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 5b47bb66c35fdbd4f9fbece57e0cb23f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.3349404
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5b47bb66c35fdbd4f9fbece57e0cb23f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.0657588e-18
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5b47bb66c35fdbd4f9fbece57e0cb23f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.14193
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5b47bb66c35fdbd4f9fbece57e0cb23f,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5b47bb66c35fdbd4f9fbece57e0cb23f,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5b47bb66c35fdbd4f9fbece57e0cb23f,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5b47bb66c35fdbd4f9fbece57e0cb23f,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5b47bb66c35fdbd4f9fbece57e0cb23f,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5b47bb66c35fdbd4f9fbece57e0cb23f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5b47bb66c35fdbd4f9fbece57e0cb23f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5b47bb66c35fdbd4f9fbece57e0cb23f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5b47bb66c35fdbd4f9fbece57e0cb23f,
+        type: 3}
+      propertyPath: m_Name
+      value: Slime
+      objectReference: {fileID: 0}
+    - target: {fileID: 8052677790429725804, guid: 5b47bb66c35fdbd4f9fbece57e0cb23f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5b47bb66c35fdbd4f9fbece57e0cb23f, type: 3}
 --- !u!1 &1734006874
 GameObject:
   m_ObjectHideFlags: 0
@@ -3734,7 +3809,7 @@ Transform:
   - {fileID: 1076888588}
   - {fileID: 2006368114}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1744967595 stripped
 MonoBehaviour:
@@ -4706,6 +4781,12 @@ PrefabInstance:
       propertyPath: joystick
       value: 
       objectReference: {fileID: 1313690153}
+    - target: {fileID: 1193068986740370422, guid: bbbbf0de42fd83d4d85b5d0e5521cbd2,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 3fe1f51dc6469d042921db1ac01ab8fd,
+        type: 2}
     - target: {fileID: 1193068986740370425, guid: bbbbf0de42fd83d4d85b5d0e5521cbd2,
         type: 3}
       propertyPath: m_LocalPosition.x
