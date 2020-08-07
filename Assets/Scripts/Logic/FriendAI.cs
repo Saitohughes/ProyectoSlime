@@ -63,19 +63,29 @@ public class FriendAI : MonoBehaviour
     {
         return mylife;
     }
+    public void Lose()
+    {
+        mylife = false;
+        StateModification(2);
+        myController.GameOver(Stop());
+    }
+    public void Win()
+    {
+        
+        StateModification(2);
+        myController.GameOver(Stop());
+    }
+    
     private void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.layer == 9)
         {
-            mylife = false;
-            StateModification(2);
-            myController.GameOver(Stop());
+            Lose();
         }
         if (collision.gameObject.layer == 12)
         {
             collision.collider.enabled = false;
-            StateModification(2);
-            myController.GameOver(Stop());
+            Win();
         }
     }
 
