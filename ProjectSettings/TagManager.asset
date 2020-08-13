@@ -12,6 +12,7 @@ TagManager:
   - Key
   - Bell
   - Time
+  - DeathFloor
   layers:
   - Default
   - TransparentFX

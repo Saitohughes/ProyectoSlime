@@ -6,7 +6,7 @@ using UnityEngine.UIElements;
 public class PitController : MonoBehaviour
 {
     // Start is called before the first frame update
-    [SerializeField] GameObject boxField;
+    [SerializeField] GameObject boxField, deathFloor;
     Collider myCol;
     private void Awake()
     {
@@ -24,6 +24,7 @@ public class PitController : MonoBehaviour
         {
             other.gameObject.GetComponent<BoxMove>().NoGrab();
             other.gameObject.SetActive(false);
+            deathFloor.SetActive(false);
             boxField.SetActive(true);
             myCol.enabled = false;
             Destroy(other, 2f);

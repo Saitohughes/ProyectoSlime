@@ -5,9 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
+    [SerializeField] int nextScene, currentScene;
     // Start is called before the first frame update
     public void Restart()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(currentScene);
+    }
+
+    public void NextScene()
+    {
+        SceneManager.LoadScene(nextScene);
     }
 }

@@ -77,7 +77,7 @@ public class GameController : MonoBehaviour
     }
     public void GameOver(bool stop)
     {
-        if (friend.Stop())
+        if (stop)
         {
             win.SetActive(true);
             buttom.SetActive(true);

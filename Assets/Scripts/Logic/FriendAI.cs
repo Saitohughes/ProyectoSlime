@@ -78,7 +78,7 @@ public class FriendAI : MonoBehaviour
     
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.layer == 9)
+        if(collision.gameObject.layer == 9 || collision.gameObject.tag == "DeathFloor")
         {
             Lose();
         }

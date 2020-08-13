@@ -7,16 +7,23 @@ using UnityEngine.UIElements;
 public class PlayerController : MonoBehaviour
 {
     // Start is called before the first frame update
+    GameController myController;
+
     [SerializeField] string instruction;
     [SerializeField] float time;
     [SerializeField] GameObject interact,armature;
     [SerializeField] float meltTime;
+    [SerializeField] bool mylife;
+
+
 
     public bool acction;
     public Joystick joystick;
 
     void Start()
     {
+        mylife = true;
+        myController = FindObjectOfType<GameController>();
         instruction = "Null";
         time = 0;
     }
@@ -124,5 +131,13 @@ public class PlayerController : MonoBehaviour
             acction = true;
         else if (acction == true)
             acction = false;
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "DeathFloor")
+        {
+            mylife = false;
+            myController.GameOver(mylife);
+        }
     }
 }
