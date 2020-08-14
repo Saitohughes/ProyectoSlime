@@ -995,6 +995,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boxField: {fileID: 2125747263}
+  deathFloor: {fileID: 0}
 --- !u!65 &453578748
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1348,6 +1349,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boxField: {fileID: 992375022}
+  deathFloor: {fileID: 0}
 --- !u!65 &567032177
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4045,8 +4047,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b666d51afafe5241893029827fb158c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextScene: 1
-  currentScene: 0
+  nextScene: 0
+  currentScene: 8
 --- !u!4 &1695000966
 Transform:
   m_ObjectHideFlags: 0
