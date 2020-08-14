@@ -18,7 +18,7 @@ public class GameController : MonoBehaviour
     {
     
         timeStart = time;
-        timeCount.text = time.ToString();
+        timeCount.text = time.ToString("F0");
         start = true;
         friend = FindObjectOfType<FriendAI>();
         var goArray = FindObjectsOfType<GameObject>();
@@ -48,7 +48,7 @@ public class GameController : MonoBehaviour
         timeStart -= Time.deltaTime;
         if(timeStart >= 0)
         {
-            timeCount.text = timeStart.ToString();
+            timeCount.text = timeStart.ToString("F0");
         }
         if(timeStart < 0)
         {
