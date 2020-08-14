@@ -1600,7 +1600,12 @@ PrefabInstance:
     - target: {fileID: 3852997889628741204, guid: 2fe206667dc04fe4c8a2609e5f4412a8,
         type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 3852997889723071682, guid: 2fe206667dc04fe4c8a2609e5f4412a8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 3852997889985791407, guid: 2fe206667dc04fe4c8a2609e5f4412a8,
         type: 3}
