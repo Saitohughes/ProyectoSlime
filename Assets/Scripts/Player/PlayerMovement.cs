@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] float speed, originalSpeed; //variabñle que va a controlar la velocidad del personaje
     [SerializeField] Rigidbody myRig; //componente necesaria
+    Animator myAnim;
 
     public Joystick joystick;
 
@@ -16,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     {
         originalSpeed = speed;
         myRig =gameObject.GetComponent<Rigidbody>(); //Se define el valor de la componente que vamos a modificar 
+        myAnim = GetComponentInChildren<Animator>();
     }
     void Start()
     {
@@ -28,6 +30,11 @@ public class PlayerMovement : MonoBehaviour
     {
         mov = new Vector3(joystick.Horizontal * speed, 0, joystick.Vertical * speed); //le damos el valor al vector con respecto a las direcciones
         myRig.velocity = mov; //aqui usamos Velocity para darle el vector que ya definimos
+
+        if (mov.magnitude > 0)
+            myAnim.SetBool("walk", true);
+        else
+            myAnim.SetBool("walk", false);
     }
 
     public void ChangeSpeed(float changeSpeed = 5.5f)

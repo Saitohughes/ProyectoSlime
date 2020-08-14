@@ -2006,7 +2006,7 @@ MonoBehaviour:
   timeCount: {fileID: 158808855}
   enemys: []
   timeStart: 0
-  time: 180
+  time: 30
   go: 0
   oneTime: 0
   start: 0

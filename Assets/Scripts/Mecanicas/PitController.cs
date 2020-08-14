@@ -27,7 +27,7 @@ public class PitController : MonoBehaviour
             deathFloor.SetActive(false);
             boxField.SetActive(true);
             myCol.enabled = false;
-            Destroy(other, 2f);
+            Destroy(other);
         }
                     
     }

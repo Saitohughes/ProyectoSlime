@@ -31,7 +31,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
+        
 
         if (instruction.Equals("Box") && interact != null)
         {
@@ -52,6 +52,7 @@ public class PlayerController : MonoBehaviour
             time += Time.deltaTime;
             if (time >= meltTime)
             {
+                acction = false;
                 interact.GetComponent<MetalBox>().Melt();
                 acction = false;
             }
@@ -139,5 +140,9 @@ public class PlayerController : MonoBehaviour
             mylife = false;
             myController.GameOver(mylife);
         }
+    }
+    public void ChangeAcction(bool action)
+    {
+        acction = action;
     }
 }

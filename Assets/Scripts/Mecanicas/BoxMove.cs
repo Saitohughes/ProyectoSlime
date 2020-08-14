@@ -9,7 +9,7 @@ public class BoxMove : MonoBehaviour
     PlayerMovement playerMov;
     Rigidbody myRig;
     BoxCollider myCollider;
-
+    [SerializeField] bool grab = false;
     
     private void Awake()
     {
@@ -32,13 +32,16 @@ public class BoxMove : MonoBehaviour
             gameObject.transform.parent = player.transform;
             playerMov.ChangeSpeed(2);
             gameObject.layer = 10;
+            grab = true;
         }
     }
 
     public void NoGrab() //funcion que se encarga de soltar la caja
     {
+        GetComponentInParent<PlayerController>().ChangeAcction(false);
         gameObject.transform.parent = null;
         playerMov.RestoreSpeed();
         gameObject.layer = 11;
+        grab=false;
     }
 }
