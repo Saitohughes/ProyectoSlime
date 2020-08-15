@@ -30,7 +30,7 @@ public class GameController : MonoBehaviour
             }
         }
     }
-    void StartGame()
+   public void StartGame()
     {
         friend.StateModification(1);
         PuzzleActive();

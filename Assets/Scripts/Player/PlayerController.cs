@@ -126,12 +126,13 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    public void myAcction()
+    public void TrueAction()
+    { 
+        acction = true;
+    }
+    public void FalseAction()
     {
-        if (acction == false)
-            acction = true;
-        else if (acction == true)
-            acction = false;
+        acction = false;
     }
     private void OnCollisionEnter(Collision collision)
     {

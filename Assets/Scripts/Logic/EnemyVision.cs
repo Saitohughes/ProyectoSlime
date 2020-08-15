@@ -12,18 +12,30 @@ public class EnemyVision : MonoBehaviour
     void Update()
     {
         Ray ray = new Ray(transform.position, transform.forward);
-   
+         
         Debug.DrawRay(ray.origin, ray.direction*vision,Color.red);
-
+     
         RaycastHit informacion = new RaycastHit();
 
         if (Physics.Raycast(ray, out informacion, vision))
         {
-            if (informacion.collider.CompareTag("Friend"))
+            if (informacion.collider)
             {
-                Debug.Log("Collisione con el amigo");
-                informacion.collider.GetComponent<FriendAI>().Lose();
+                if (informacion.collider.CompareTag("Friend"))
+                {
+                    Debug.Log("Collisione con el amigo");
+                    informacion.collider.GetComponent<FriendAI>().Lose();
+                }
+
+                vision = informacion.distance;
+
             }
         }
+        else
+        {
+            vision = 10f;
+        }
+
+
     }
 }
