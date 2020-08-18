@@ -10,7 +10,7 @@ public class EnemyVision : MonoBehaviour
     {
 
     }
-    void Update()
+    void FixedUpdate()
     {
         RaycastHit informacion = new RaycastHit();
 
