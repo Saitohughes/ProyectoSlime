@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Tutorial/FirstLevel.unity
     guid: 3f48f5abb57504a45824cc0cf217f383
+  - enabled: 1
+    path: Assets/Scenes/SelectorScreen.unity
+    guid: be026f0a83aa47f429ec4ba7fd3047fe
   m_configObjects: {}

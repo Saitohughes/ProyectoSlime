@@ -5,20 +5,33 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
-    [SerializeField] int nextScene, currentScene;
+    private int thisScene;
+    private void Start()
+    {
+        thisScene = SceneManager.GetActiveScene().buildIndex;
+    }
     // Start is called before the first frame update
     public void Restart()
     {
-        SceneManager.LoadScene(currentScene);
+        int thisScene = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(thisScene);
     }
 
-    public void NextScene()
+    public void NextScene( )
     {
-        SceneManager.LoadScene(nextScene);
+        SceneManager.LoadScene(thisScene + 1 );
     }
 
+    public void BackMenu()
+    {
+        SceneManager.LoadScene("SelectorScreen");
+    }
     public void Quit()
     {
         Application.Quit();
+    }
+    public void LoadMainMenu()
+    {
+        SceneManager.LoadScene("Main Menu");
     }
 }

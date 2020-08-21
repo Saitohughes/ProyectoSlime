@@ -29,7 +29,7 @@ public class FriendAI : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         
         if (state == 0) // dejeme solo

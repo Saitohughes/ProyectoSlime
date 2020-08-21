@@ -31,7 +31,8 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        //linea de testing
+        acction = Input.GetKey(KeyCode.Q);
 
         if (instruction.Equals("Box") && interact != null)
         {

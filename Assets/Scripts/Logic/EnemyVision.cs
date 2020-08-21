@@ -10,13 +10,13 @@ public class EnemyVision : MonoBehaviour
     {
 
     }
-    void FixedUpdate()
+    void Update()
     {
         RaycastHit informacion = new RaycastHit();
 
         if (Physics.Raycast(transform.position, transform.forward, out informacion, vision))
         {
-            Debug.Log("Entre");  
+            //Debug.Log("Entre");  
             if (informacion.collider.CompareTag("Friend"))
             {
                  Debug.Log("Collisione con el amigo");
@@ -27,7 +27,7 @@ public class EnemyVision : MonoBehaviour
         else
         {
             vision = 10;
-            Debug.Log("No entre");
+            //Debug.Log("No entre");
         }
 
     }
