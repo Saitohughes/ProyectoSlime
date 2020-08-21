@@ -81,6 +81,7 @@ public class GameController : MonoBehaviour
         {
             win.SetActive(true);
             buttom.SetActive(true);
+            LevelCount.Instance.UpdateCount();
         }
         else
         {
