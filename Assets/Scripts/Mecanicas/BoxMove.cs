@@ -22,7 +22,11 @@ public class BoxMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (grab == true)
+        {
+            if (GetComponentInParent<PlayerController>().GetInstrucction().Equals("Null"))
+                NoGrab();
+        }
     }
 
     public void Grab(GameObject player) //metodo que se encarga de agarrar la caja
@@ -32,7 +36,7 @@ public class BoxMove : MonoBehaviour
             gameObject.transform.parent = player.transform;
             playerMov.ChangeSpeed(2);
             gameObject.layer = 10;
-            //grab = true;
+            grab = true;
         }
     }
 
@@ -42,6 +46,6 @@ public class BoxMove : MonoBehaviour
         gameObject.transform.parent = null;
         playerMov.RestoreSpeed();
         gameObject.layer = 11;
-        //grab=false;
+        grab=false;
     }
 }

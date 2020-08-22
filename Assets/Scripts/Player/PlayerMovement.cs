@@ -1,5 +1,9 @@
-﻿using System.Collections;
+﻿using Cinemachine.Utility;
+using System.Collections;
 using System.Collections.Generic;
+using System.Security.AccessControl;
+using UnityEditor.Rendering;
+using UnityEditor.Timeline;
 //using UnityEditor.U2D;
 using UnityEngine;
 
@@ -8,17 +12,22 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float speed, originalSpeed, horizontal, vertical; //variabñle que va a controlar la velocidad del personaje
     [SerializeField] Rigidbody myRig; //componente necesaria
     Animator myAnim;
-
+   [SerializeField] bool canHead = true;
     public Joystick joystick;
 
-    Vector3 mov; //vector de movimiento
-    Vector3 desf;
+    Vector3 mov,forward,right; //vector de movimiento
+  
     // Start is called before the first frame update
     private void Awake()
     {
         originalSpeed = speed;
         myRig =gameObject.GetComponent<Rigidbody>(); //Se define el valor de la componente que vamos a modificar 
         myAnim = GetComponentInChildren<Animator>();
+        forward = Camera.main.transform.forward;
+        forward.y = 0;
+        forward = Vector3.Normalize(forward);
+        right = Quaternion.Euler(new Vector3(0, 90, 0)) * forward;
+
     }
   
 
@@ -26,16 +35,44 @@ public class PlayerMovement : MonoBehaviour
    
     void FixedUpdate()
     {
+        Movement();
+    }
+
+    public void ChangeSpeed(float changeSpeed = 5.5f)
+    {
+         speed = changeSpeed;
+        CanHead(false);
+    }
+    public void RestoreSpeed()
+    {
+        speed = originalSpeed;
+        CanHead(true);
+    }
+
+    void Movement()
+    {
         horizontal = joystick.Horizontal;
         vertical = joystick.Vertical;
 
-        desf = new Vector3(1f,0,1f);
 
-        mov = new Vector3(horizontal * speed, 0, vertical * speed); //le damos el valor al vector con respecto a las direcciones
-        //mov = new Vector3(Input.GetAxis("Horizontal") * speed, 0, Input.GetAxis("Vertical") * speed);
-        myRig.velocity = mov ; //aqui usamos Velocity para darle el vector que ya definimos
-       
+        mov = new Vector3(horizontal, 0, vertical); //le damos el valor al vector con respecto a las direcciones
+        Vector3 rightMovement = right * speed * Time.deltaTime * horizontal;
+        Vector3 forwardMovement = forward * speed * Time.deltaTime * vertical;
+
+        Vector3 heading = Vector3.Normalize(rightMovement + forwardMovement);
         
+
+        if (heading.magnitude != 0 && canHead)
+        {
+            transform.forward = heading; 
+        }
+
+       
+
+        transform.position += rightMovement;
+        transform.position += forwardMovement;
+
+
 
         if (mov.magnitude > 0)
             myAnim.SetBool("walk", true);
@@ -43,12 +80,8 @@ public class PlayerMovement : MonoBehaviour
             myAnim.SetBool("walk", false);
     }
 
-    public void ChangeSpeed(float changeSpeed = 5.5f)
+    public void CanHead(bool head)
     {
-         speed = changeSpeed;
-    }
-    public void RestoreSpeed()
-    {
-        speed = originalSpeed;
+        canHead = head;
     }
 }

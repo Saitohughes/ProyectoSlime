@@ -32,17 +32,15 @@ public class GameController : MonoBehaviour
     }
    public void StartGame()
     {
-        friend.StateModification(1);
-        PuzzleActive();
-    }
-    void StartButtom()
-    {
         if (oneTime == false)
         {
+            friend.StateModification(1);
+            PuzzleActive();
             go = true;
             oneTime = true;
         }
     }
+ 
     public void Timer()
     {
         timeStart -= Time.deltaTime;
@@ -91,14 +89,14 @@ public class GameController : MonoBehaviour
     }
     void Update()
     {
-        if (timeStart > 0)
+        if (timeStart > 0 || go)
         {   
             Timer();
         }
-        if (Input.GetKey(KeyCode.R))
+       /* if (Input.GetKey(KeyCode.R))
         {
             StartButtom();
-        }
+        }*/
         /*
         if (Input.GetKey(KeyCode.E))
         {
