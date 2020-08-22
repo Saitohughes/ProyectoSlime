@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Assertions.Must;
 using UnityEngine.UIElements;
 
 public class PlayerController : MonoBehaviour
@@ -14,18 +15,22 @@ public class PlayerController : MonoBehaviour
     [SerializeField] GameObject interact,armature;
     [SerializeField] float meltTime;
     [SerializeField] bool mylife;
-
+    PlayerMovement myMov;
 
 
     public bool acction;
     public Joystick joystick;
-
+    private void Awake()
+    {
+        myMov = GetComponent<PlayerMovement>();
+    }
     void Start()
     {
         mylife = true;
         myController = FindObjectOfType<GameController>();
         instruction = "Null";
         time = 0;
+
     }
 
     // Update is called once per frame
@@ -34,14 +39,14 @@ public class PlayerController : MonoBehaviour
         //linea de testing
         acction = Input.GetKey(KeyCode.Q);
 
-        if (instruction.Equals("Box") && interact != null)
-        {
-             if ( !acction )
-             {
+        if (acction == false)
+            if (instruction.Equals("Box") && interact != null)
+            { 
+                Debug.Log("sali");
+                myMov.CanHead(true);
                 interact.GetComponent<BoxMove>().NoGrab();
                 instruction = "Null";
              }
-        }
 
         if (instruction.Equals("Metal") && interact != null)
         {
@@ -59,23 +64,16 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        if (instruction.Equals("Null"))
+       if (instruction.Equals("Null"))
         {
+            
             interact = null;
             time = 0;
             armature.layer = 8;
             float vertical = joystick.Vertical;
             float horizontal = joystick.Horizontal;
             
-            if (vertical > 0 &&  Math.Abs(vertical) > Math.Abs(horizontal))
-                OnRotate(0);
-            if (vertical < 0 && Math.Abs(vertical) > Math.Abs(horizontal))
-                OnRotate(180);
-            if (horizontal > 0 && Math.Abs(horizontal) > Math.Abs(vertical))
-                OnRotate(90);
-            if (horizontal < 0 && Math.Abs(horizontal) > Math.Abs(vertical))
-                OnRotate(270);
-
+      
         }
 
     }
@@ -121,11 +119,12 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void OnRotate(float RotationPosition = 0)
+  /*  public void OnRotate(float RotationPosition = 0)
     {
         armature.transform.localRotation = Quaternion.Euler( new Vector3(0, RotationPosition, 0));
 
     }
+  */
 
     public void TrueAction()
     { 
@@ -147,6 +146,9 @@ public class PlayerController : MonoBehaviour
     {
         acction = action;
     }
-
+    public string GetInstrucction()
+    {
+        return instruction;
+    }
 
 }
