@@ -32,7 +32,7 @@ public class BoxMove : MonoBehaviour
             gameObject.transform.parent = player.transform;
             playerMov.ChangeSpeed(2);
             gameObject.layer = 10;
-            grab = true;
+            //grab = true;
         }
     }
 
@@ -42,6 +42,6 @@ public class BoxMove : MonoBehaviour
         gameObject.transform.parent = null;
         playerMov.RestoreSpeed();
         gameObject.layer = 11;
-        grab=false;
+        //grab=false;
     }
 }
