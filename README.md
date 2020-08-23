@@ -22,12 +22,14 @@ Estos elementos proximamente serán remplazados pos modelos 3D que representen c
 <br>Caja azul: Personaje aliado que debe alcanzar el punto final para poder superar el nivel.
 <br>Caja café: Caja de madera que impide el paso, para solucionarlo debes acercarte pulzar el boton accion, sostenerlo mientras te mueves, y empujarla o arrastrarla hasta algún pozo.
 <br>Pozo: Hueco negro que impide tu paso o el de la caja azul, para solucionarlo debes llevar la caja café hasta el pozo.
-<br>Caja gris: Caja de metal que impide el paso, para solucionarlo debes acercase y pulzar el boton de acción hasta que desaparezca. 
+<br>Caja gris: Caja de metal que impide el paso, para solucionarlo debes acercase y pulzar el boton de acción hasta que desaparezca.
+<br>Esfera: Cirulo que activa un mecanismo para bajar el muro que es un rectángulo azul tipo puerta, para activarlo simplemente debes acercarte a la esfera y oprimir el boton acción.
 <br>Caja roja: Enemigo que si detecta la caja azul se pierde el nivel, se puede desviar de su punto actual o obstruir su visión con una caja de madera al frente.
 <br>Rectángulo naranja: Lugar donde debe estar el enemigo, para llevarlo hasta esta ubicación se debe acercar a este retángulo y oprimir el boton de acción.
 
 ### Bugs
 Estos errores son falencia que aparecieron durante el desarrollo o diseño del juego, en el estado actual del juego estos son los posibles fallos:
+<br>El menu principal de selección de niveles puede que no se ajuste a la resolución de la pantalla del teléfono, puedo o no ocurrir y no hay manera de evitarlo.
 
 #### Bugs tipo C
 Estos errores son visuales que no alteran el flujo del juego.
