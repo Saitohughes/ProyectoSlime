@@ -28,7 +28,7 @@ public class LevelManager : MonoBehaviour
             unlockLevels = currentLevels;
         }
     }
-   public void UpdateButtons()
+    public void UpdateButtons()
     {
         for (int i = 0; i < unlockLevels + 1 ; i++)
         {

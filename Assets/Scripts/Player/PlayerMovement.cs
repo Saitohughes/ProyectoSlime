@@ -2,8 +2,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Security.AccessControl;
-using UnityEditor.Rendering;
-using UnityEditor.Timeline;
 //using UnityEditor.U2D;
 using UnityEngine;
 
@@ -12,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float speed, originalSpeed, horizontal, vertical; //variabñle que va a controlar la velocidad del personaje
     [SerializeField] Rigidbody myRig; //componente necesaria
     Animator myAnim;
-   [SerializeField] bool canHead = true;
+    [SerializeField] bool canHead = true;
     public Joystick joystick;
 
     Vector3 mov,forward,right; //vector de movimiento
@@ -33,7 +31,7 @@ public class PlayerMovement : MonoBehaviour
 
     // Update is called once per frame
    
-    void FixedUpdate()
+    void Update()
     {
         Movement();
     }

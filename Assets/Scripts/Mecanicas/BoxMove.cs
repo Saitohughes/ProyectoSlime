@@ -7,7 +7,6 @@ public class BoxMove : MonoBehaviour
 {
     // Start is called before the first frame update
     PlayerMovement playerMov;
-    Rigidbody myRig;
     BoxCollider myCollider;
     [SerializeField] bool grab = false;
     
