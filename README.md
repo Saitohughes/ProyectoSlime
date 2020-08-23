@@ -23,7 +23,7 @@ Estos elementos proximamente serán remplazados pos modelos 3D que representen c
 <br>Caja café: Caja de madera que impide el paso, para solucionarlo debes acercarte pulzar el boton accion, sostenerlo mientras te mueves, y empujarla o arrastrarla hasta algún pozo.
 <br>Pozo: Hueco negro que impide tu paso o el de la caja azul, para solucionarlo debes llevar la caja café hasta el pozo.
 <br>Caja gris: Caja de metal que impide el paso, para solucionarlo debes acercase y pulzar el boton de acción hasta que desaparezca. 
-<br>Caja roja: Enemigo que si detecta la caja azul se pierde el nivel.
+<br>Caja roja: Enemigo que si detecta la caja azul se pierde el nivel, se puede desviar de su punto actual o obstruir su visión con una caja de madera al frente.
 <br>Rectángulo naranja: Lugar donde debe estar el enemigo, para llevarlo hasta esta ubicación se debe acercar a este retángulo y oprimir el boton de acción.
 
 ### Bugs
@@ -31,15 +31,16 @@ Estos errores son falencia que aparecieron durante el desarrollo o diseño del j
 
 #### Bugs tipo C
 
-
 #### Bugs tipo B
-
+<br>Hay ocasiones en las que el personaje gana mas velocidad y se desplaza mas en una dierccion, esto pasa cuando tiene la caja agarrada. Actualmente no hay solución alguna al error ni manera de evitarlo.
+<br>Al momento de terminar un nivel, si se coloca a repetir el mismo nivel se irán desbloqueando los niveles siguientes sin necesidad de pasar el anterior al desbloqueado, osea que si se repite el primer nivel muchas veces, se puede llegar a desbloquear el primer mundo tutorial por completo; al ser un exploit no se puede evitar por ahora pero se puede no hacer.
 
 #### Bugs tipo A
-
+<br>Aveces la caja se queda adherida al personaje aun cuando lo sueltas, para solucionarlo se debe reiniciar el nivel completo.
+<nr>Se tuvo un problema con el raycast en el cual a veces se detectaba la caja y luego no (se volvía un luz intermitente y no pérmitia poner la caja como obstáculo), este problema parece aparecer en algunos dispositivos y en otros no, esto imposibilita terminar el juego y no hay manera de evitarlo.
 
 ### Documentación
-Todos los archivos que evidencian el proceso de diseño y desarrollo del juego se encuentran alojados den la siguiente carpeta de google drive, tambien dentro de la carpeta se podrá acceder a cada versión contruida o "Build" del juego las cuales se deben probar en un dispositivo movil android(Mínimo android .0).
+Todos los archivos que evidencian el proceso de diseño y desarrollo del juego se encuentran alojados den la siguiente carpeta de google drive, tambien dentro de la carpeta se podrá acceder a cada versión contruida o "Build" del juego las cuales se deben probar en un dispositivo movil android(Mínimo android 4.4).
 <br>Link de acceso:
 <br>https://drive.google.com/drive/folders/1iaPnqDLhX-hQOxncur0PhAk0RiJ7sHmB?usp=sharing
 
