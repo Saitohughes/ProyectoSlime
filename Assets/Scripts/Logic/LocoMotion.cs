@@ -37,7 +37,7 @@ public class LocoMotion : MonoBehaviour
         //animator.SetFloat("turn", velocity.x);
         //animator.SetFloat("speed", velocity.y);
 
-        GetComponent<LookAt>().lookAtTargetPosition = agent.steeringTarget + transform.forward;
+        //GetComponent<LookAt>().lookAtTargetPosition = agent.steeringTarget + transform.forward;
 
     }
     void OnAnimatorMove()

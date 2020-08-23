@@ -7,7 +7,6 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] int state = 0; //0 Guard, 1 Exit
     [SerializeField] Transform target;
     [SerializeField] Transform targetGuard;
-    [SerializeField] float followDistance;
 
 
     PathFinder pathFinder;

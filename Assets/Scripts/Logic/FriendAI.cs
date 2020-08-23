@@ -12,7 +12,6 @@ public class FriendAI : MonoBehaviour
     [SerializeField] Transform targetSafe;
     [SerializeField] Transform myself;
     [SerializeField] Transform targetGuard;
-    [SerializeField] float followDistance;
     
 
     PathFinder pathFinder;

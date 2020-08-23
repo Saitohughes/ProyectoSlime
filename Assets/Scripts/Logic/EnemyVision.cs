@@ -6,10 +6,6 @@ public class EnemyVision : MonoBehaviour
 {
     [SerializeField] float vision;
     
-    void Start()
-    {
-
-    }
     void Update()
     {
         RaycastHit informacion = new RaycastHit();
@@ -37,8 +33,5 @@ public class EnemyVision : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawRay(transform.position, transform.forward* vision);
     }
-    private void OnCollisionStay(Collision collision)
-    {
-        
-    }
+
 }
