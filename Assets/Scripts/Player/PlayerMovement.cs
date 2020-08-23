@@ -2,8 +2,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Security.AccessControl;
-using UnityEditor.Rendering;
-using UnityEditor.Timeline;
 //using UnityEditor.U2D;
 using UnityEngine;
 
@@ -33,7 +31,7 @@ public class PlayerMovement : MonoBehaviour
 
     // Update is called once per frame
    
-    void FixedUpdate()
+    void Update()
     {
         Movement();
     }
