@@ -21,12 +21,12 @@ public class EnemyVision : MonoBehaviour
             }         
             vision = informacion.distance;
         }
-        else
+        /*else
         {
             vision = 10;
             //Debug.Log("No entre");
         }
-        
+        */
     }
 
     private void OnDrawGizmos()
