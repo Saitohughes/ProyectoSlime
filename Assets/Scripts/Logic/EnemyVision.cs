@@ -8,9 +8,10 @@ public class EnemyVision : MonoBehaviour
     
     void Update()
     {
+        Ray ray = new Ray(transform.position, transform.forward);
         RaycastHit informacion = new RaycastHit();
 
-        if (Physics.Raycast(transform.position, transform.forward, out informacion, vision))
+        if (Physics.Raycast(ray, out informacion, vision))
         {
             //Debug.Log("Entre");  
             if (informacion.collider.CompareTag("Friend"))
@@ -25,7 +26,7 @@ public class EnemyVision : MonoBehaviour
             vision = 10;
             //Debug.Log("No entre");
         }
-
+        
     }
 
     private void OnDrawGizmos()
