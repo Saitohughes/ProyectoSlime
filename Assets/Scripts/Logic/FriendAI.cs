@@ -6,6 +6,7 @@ using UnityEngine.AI;
 public class FriendAI : MonoBehaviour
 {
     GameController myController;
+    
     [SerializeField] int state = 0; //0 Guard, 1 Exit
     [SerializeField] bool mylife, win;
     [SerializeField] Transform targetSafe;
