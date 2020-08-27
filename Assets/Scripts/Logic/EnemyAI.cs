@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyAI : MonoBehaviour
 {
+    [SerializeField] GameObject vision;
     [SerializeField] int state = 0; //0 Guard, 1 Exit
     [SerializeField] Transform target;
     [SerializeField] Transform targetGuard;
@@ -34,6 +35,7 @@ public class EnemyAI : MonoBehaviour
 
             pathFinder.target = target;
 
+
         }
 
     }
@@ -45,5 +47,6 @@ public class EnemyAI : MonoBehaviour
     public void StateModification(int NewState) // modifica los estados, desde otros lugares
     {
         state = NewState;
+        vision.SetActive(false);
     }
 }

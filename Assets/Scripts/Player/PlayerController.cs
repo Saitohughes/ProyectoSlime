@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float time;
     [SerializeField] GameObject interact,armature;
     [SerializeField] float meltTime;
-    [SerializeField] bool mylife;
+    [SerializeField] bool mylife, see;
     PlayerMovement myMov;
 
 
@@ -26,6 +26,7 @@ public class PlayerController : MonoBehaviour
     }
     void Start()
     {
+        see = false;
         mylife = true;
         myController = FindObjectOfType<GameController>();
         instruction = "Null";
@@ -37,9 +38,9 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         //linea de testing
-       // acction = Input.GetKey(KeyCode.Q);
+        acction = Input.GetKey(KeyCode.Q);
 
-        if (acction == false)
+        if (acction == false && see== false)
             if (instruction.Equals("Box") && interact != null)
             { 
                 Debug.Log("sali");
@@ -50,10 +51,9 @@ public class PlayerController : MonoBehaviour
 
         if (instruction.Equals("Metal") && interact != null)
         {
-            if (!acction)
+            if (!acction && !see)
             {
                 instruction = "Null";
-               
             }
             time += Time.deltaTime;
             if (time >= meltTime)
@@ -77,45 +77,73 @@ public class PlayerController : MonoBehaviour
         }
 
     }
-
-   
-    private void OnTriggerStay(Collider collision)
+    private void OnTriggerExit(Collider other)
     {
-        if (instruction != "Null")
+        if(instruction != "Null")
         {
             instruction = "Null";
+            interact = null;
+            see = false;
         }
-        else if (instruction.Equals("Null"))
+    }
+
+    private void OnTriggerStay(Collider collision)
+    {
+       
+        if (instruction.Equals("Null"))
         {
            
             //interact = collision.gameObject;
-            if (collision.gameObject.CompareTag("Box") && acction )
+            if (collision.gameObject.CompareTag("Box"))
             {
+                see = true;
                 interact = collision.gameObject;
-                interact.GetComponent<BoxMove>().Grab(gameObject);
                 instruction = "Box";
-                armature.layer = 9;
+                if (acction)
+                {
+                    see = false;
+                    interact.GetComponent<BoxMove>().Grab(gameObject);
+                    armature.layer = 9; 
+                }
 
             }
-            else if (collision.gameObject.CompareTag("Metal") && acction )
+            else if (collision.gameObject.CompareTag("Metal"))
             {
-                interact = collision.gameObject;
+                see = true;
                 instruction = "Metal";
-                armature.layer = 9;
+                interact = collision.gameObject;
+                if (acction)
+                {
+                    armature.layer = 9;
+                    see = false;
+                }
             }
-            else if(collision.gameObject.CompareTag("Key") && acction)
+            else if(collision.gameObject.CompareTag("Key"))
             {
-                collision.gameObject.GetComponent<KeyMechanism>().ActivateDoor();
-                instruction = "Null";
-                acction = false;
+                see = true;
+                instruction = "Key";
+                if (acction)
+                {
+                    collision.gameObject.GetComponent<KeyMechanism>().ActivateDoor();
+                    instruction = "Null";
+                    acction = false;
+                    see = false;
+                }
             }
-            else if(collision.gameObject.CompareTag("Bell") && acction)
+            else if(collision.gameObject.CompareTag("Bell"))
             {
-                collision.gameObject.GetComponent<Bell>().CallGuard();
-                instruction = "Null";
-                collision.gameObject.layer = 9;
-                acction = false;
+                instruction = "Bell";
+                see = true;
+                if (acction)
+                {
+                    collision.gameObject.GetComponent<Bell>().CallGuard();
+                    instruction = "Null";
+                    collision.gameObject.layer = 9;
+                    acction = false;
+                    see = false;
+                }
             }
+            
         }
     }
 
@@ -150,5 +178,6 @@ public class PlayerController : MonoBehaviour
     {
         return instruction;
     }
+  
 
 }

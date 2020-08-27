@@ -4,35 +4,48 @@ using UnityEngine;
 
 public class EnemyVision : MonoBehaviour
 {
-    [SerializeField] float vision;
-    
+
+    public GameObject objectCollision;
+    [SerializeField] float vision, sphereRadius;
+    public LayerMask layerMask;
+
+    private Vector3 origin;
+    private Vector3 direction;
+
+    private float currentHitDistance;
+
+
     void Update()
     {
-        Ray ray = new Ray(transform.position, transform.forward);
-        RaycastHit informacion = new RaycastHit();
+        origin = transform.position;
+        direction = transform.forward;
+        RaycastHit informacion;
 
-        if (Physics.Raycast(ray, out informacion, vision))
+        if (Physics.SphereCast(origin,sphereRadius,direction,out informacion, vision, layerMask, QueryTriggerInteraction.UseGlobal))
         {
-            //Debug.Log("Entre");  
+            objectCollision = informacion.transform.gameObject;
+            currentHitDistance = informacion.distance;
+            Debug.Log("Entre");  
             if (informacion.collider.CompareTag("Friend"))
             {
-                 Debug.Log("Collisione con el amigo");
+                Debug.Log("Collisione con el amigo");
                 informacion.collider.GetComponent<FriendAI>().Lose();
             }         
-            vision = informacion.distance;
+            //vision = informacion.distance;
         }
-        /*else
+        else
         {
-            vision = 10;
-            //Debug.Log("No entre");
+            currentHitDistance = vision;
+            objectCollision = null;
         }
-        */
+        
     }
 
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawRay(transform.position, transform.forward* vision);
+        Debug.DrawLine(origin, origin + direction * currentHitDistance);
+        Gizmos.DrawWireSphere(origin + direction * currentHitDistance, sphereRadius);
     }
-
+  
 }

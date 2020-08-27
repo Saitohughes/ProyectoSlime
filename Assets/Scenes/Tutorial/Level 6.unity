@@ -1600,25 +1600,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &939098658 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8350207018198818362, guid: 0eb19fb682d030048925375c720e5f01,
-    type: 3}
-  m_PrefabInstance: {fileID: 1876447042}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &939098670
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 939098658}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1027c065a6df9c04bb6f7f865739bbe4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  vision: 10
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -2021,6 +2002,30 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1109722424}
   m_CullTransparentMesh: 0
+--- !u!1 &1265724566 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8350207017385556562, guid: 0eb19fb682d030048925375c720e5f01,
+    type: 3}
+  m_PrefabInstance: {fileID: 1876447042}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1265724568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1265724566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1027c065a6df9c04bb6f7f865739bbe4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectCollision: {fileID: 0}
+  vision: 12
+  sphereRadius: 1
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!1 &1299618361
 GameObject:
   m_ObjectHideFlags: 0
@@ -3102,6 +3107,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1299618362}
     m_Modifications:
+    - target: {fileID: 8350207017385556563, guid: 0eb19fb682d030048925375c720e5f01,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8350207017385556563, guid: 0eb19fb682d030048925375c720e5f01,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.358042
+      objectReference: {fileID: 0}
+    - target: {fileID: 8350207017385556563, guid: 0eb19fb682d030048925375c720e5f01,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8350207017385556563, guid: 0eb19fb682d030048925375c720e5f01,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 41.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 8350207017385556563, guid: 0eb19fb682d030048925375c720e5f01,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9337055
+      objectReference: {fileID: 0}
     - target: {fileID: 8350207017532734043, guid: 0eb19fb682d030048925375c720e5f01,
         type: 3}
       propertyPath: m_LocalPosition.x
