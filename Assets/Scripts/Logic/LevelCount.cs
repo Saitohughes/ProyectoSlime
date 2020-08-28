@@ -13,6 +13,7 @@ public class LevelCount : MonoBehaviour
     // Update is called once per frame
     private void Awake()
     {
+        
         if(instance != null)
         {
             Destroy(gameObject);
@@ -23,12 +24,13 @@ public class LevelCount : MonoBehaviour
         }
 
         DontDestroyOnLoad(gameObject);
-        mycount = 0;
+        mycount = PlayerPrefs.GetInt("turorialProgress", mycount); ;
     }
 
     public int Mycount { get => mycount; }
     public void UpdateCount()
     {
         mycount++;
+        PlayerPrefs.SetInt("turorialProgress", mycount);
     }
 }
