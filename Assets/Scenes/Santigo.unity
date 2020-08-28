@@ -3894,8 +3894,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b666d51afafe5241893029827fb158c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextScene: 0
-  currentScene: 0
 --- !u!4 &1695000966
 Transform:
   m_ObjectHideFlags: 0
@@ -5209,7 +5207,6 @@ MonoBehaviour:
   targetSafe: {fileID: 1217698503}
   myself: {fileID: 543450651855107703}
   targetGuard: {fileID: 2043075088}
-  followDistance: 0
 --- !u!65 &919132147652455636
 BoxCollider:
   m_ObjectHideFlags: 0
