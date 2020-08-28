@@ -55,13 +55,6 @@ public class PlayerController : MonoBehaviour
             {
                 instruction = "Null";
             }
-            time += Time.deltaTime;
-            if (time >= meltTime)
-            {
-                acction = false;
-                interact.GetComponent<MetalBox>().Melt();
-                acction = false;
-            }
         }
 
        if (instruction.Equals("Null"))
@@ -86,21 +79,25 @@ public class PlayerController : MonoBehaviour
             see = false;
         }
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.layer == 11)
+        {
+            see = true;
+        }
+    }
 
     private void OnTriggerStay(Collider collision)
     {
-       
-        if (instruction.Equals("Null"))
-        {
-           
+
             //interact = collision.gameObject;
-            if (collision.gameObject.CompareTag("Box"))
+            if(collision.gameObject.CompareTag("Box"))
             {
-                see = true;
-                interact = collision.gameObject;
                 instruction = "Box";
+                interact = collision.gameObject; 
                 if (acction)
                 {
+                    Debug.Log("ACTIVE");
                     see = false;
                     interact.GetComponent<BoxMove>().Grab(gameObject);
                     armature.layer = 9; 
@@ -109,21 +106,29 @@ public class PlayerController : MonoBehaviour
             }
             else if (collision.gameObject.CompareTag("Metal"))
             {
-                see = true;
                 instruction = "Metal";
                 interact = collision.gameObject;
                 if (acction)
                 {
-                    armature.layer = 9;
-                    see = false;
+                    Debug.Log("ACTIVE");
+                    //armature.layer = 9;
+                    time += Time.deltaTime;                 
+                    if (time >= meltTime)
+                    {
+                        acction = false;
+                        interact.GetComponent<MetalBox>().Melt();
+                        see = false;
+                    }
+               
                 }
             }
             else if(collision.gameObject.CompareTag("Key"))
             {
-                see = true;
                 instruction = "Key";
+
                 if (acction)
                 {
+                    Debug.Log("ACTIVE");
                     collision.gameObject.GetComponent<KeyMechanism>().ActivateDoor();
                     instruction = "Null";
                     acction = false;
@@ -133,9 +138,9 @@ public class PlayerController : MonoBehaviour
             else if(collision.gameObject.CompareTag("Bell"))
             {
                 instruction = "Bell";
-                see = true;
                 if (acction)
                 {
+                    Debug.Log("ACTIVE");
                     collision.gameObject.GetComponent<Bell>().CallGuard();
                     instruction = "Null";
                     collision.gameObject.layer = 9;
@@ -144,7 +149,7 @@ public class PlayerController : MonoBehaviour
                 }
             }
             
-        }
+        
     }
 
   /*  public void OnRotate(float RotationPosition = 0)

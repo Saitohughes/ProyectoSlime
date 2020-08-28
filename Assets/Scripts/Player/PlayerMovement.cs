@@ -38,7 +38,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void ChangeSpeed(float changeSpeed = 5.5f)
     {
-         speed = changeSpeed;
+        speed = changeSpeed;
         CanHead(false);
     }
     public void RestoreSpeed()

@@ -24,8 +24,7 @@ public class EnemyVision : MonoBehaviour
         if (Physics.SphereCast(origin,sphereRadius,direction,out informacion, vision, layerMask, QueryTriggerInteraction.UseGlobal))
         {
             objectCollision = informacion.transform.gameObject;
-            currentHitDistance = informacion.distance;
-            Debug.Log("Entre");  
+            currentHitDistance = informacion.distance; 
             if (informacion.collider.CompareTag("Friend"))
             {
                 Debug.Log("Collisione con el amigo");

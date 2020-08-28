@@ -33,7 +33,7 @@ public class BoxMove : MonoBehaviour
         if (player != null)
         {
             gameObject.transform.parent = player.transform;
-            playerMov.ChangeSpeed(2);
+            playerMov.ChangeSpeed();
             gameObject.layer = 10;
             grab = true;
         }
