@@ -432,6 +432,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45977bbae16431c46a013576a1aea384, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &212669286 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6271107219666429601, guid: 97968a2a34181df4f9cc01ce1f2c7d33,
+    type: 3}
+  m_PrefabInstance: {fileID: 212669282}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &212669287 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6271107219018135581, guid: 97968a2a34181df4f9cc01ce1f2c7d33,
+    type: 3}
+  m_PrefabInstance: {fileID: 212669282}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &212669288 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6271107219099224283, guid: 97968a2a34181df4f9cc01ce1f2c7d33,
+    type: 3}
+  m_PrefabInstance: {fileID: 212669282}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &382828979
 GameObject:
   m_ObjectHideFlags: 0
@@ -1268,9 +1292,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   friend: {fileID: 0}
   win: {fileID: 212669284}
-  lost: {fileID: 0}
-  hud: {fileID: 0}
-  timeCount: {fileID: 0}
+  lost: {fileID: 212669286}
+  hud: {fileID: 212669288}
+  timeCount: {fileID: 212669287}
   enemys: []
   timeStart: 0
   time: 30
