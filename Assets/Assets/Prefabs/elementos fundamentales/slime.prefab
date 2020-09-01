@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 1193068986740370426}
   - component: {fileID: 1193068986740370421}
   - component: {fileID: 1193068986740370427}
-  - component: {fileID: 7039961793792711617}
+  - component: {fileID: 6584189125482758131}
   m_Layer: 8
   m_Name: slime
   m_TagString: Player
@@ -129,22 +129,22 @@ MonoBehaviour:
   armature: {fileID: 1193068988249038827}
   meltTime: 3
   mylife: 0
+  see: 0
   acction: 0
   joystick: {fileID: 0}
---- !u!136 &7039961793792711617
-CapsuleCollider:
+--- !u!65 &6584189125482758131
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1193068986740370420}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 3fe1f51dc6469d042921db1ac01ab8fd, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.65129715
-  m_Height: 1.3025942
-  m_Direction: 1
-  m_Center: {x: -0.13705385, y: 0.16975623, z: -0.06357539}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1193068988249038827
 GameObject:
   m_ObjectHideFlags: 0

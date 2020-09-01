@@ -2,18 +2,23 @@
 using System.Collections.Generic;
 //using UnityEditor.UIElements;
 using UnityEngine;
+using TMPro;
 using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
     [SerializeField] FriendAI friend;
-    [SerializeField] GameObject win, lost, buttom;
-    [SerializeField] Text timeCount;
+    [SerializeField] GameObject win, lost,hud;
+    [SerializeField] TextMeshProUGUI timeCount;
     [SerializeField] List<GameObject> enemys;
     [SerializeField] float timeStart, time;
     [SerializeField] bool go = false, oneTime, start;
     [SerializeField] float wardTime;
-
+    PlayerMovement myMov;
+    private void Awake()
+    {
+        myMov = FindObjectOfType<PlayerMovement>();
+    }
     void Start()
     {
     
@@ -77,14 +82,12 @@ public class GameController : MonoBehaviour
     {
         if (stop)
         {
-            win.SetActive(true);
-            buttom.SetActive(true);
-            LevelCount.Instance.UpdateCount();
+            Win();
         }
         else
         {
-            lost.SetActive(true);
-            buttom.SetActive(true);
+            Lost();
+            
         }  
     }
     void Update()
@@ -104,5 +107,22 @@ public class GameController : MonoBehaviour
         }
         */
     }
+
+    public void Win()
+    {
+        win.SetActive(true);
+        LevelCount.Instance.UpdateCount();
+        hud.SetActive(false);
+        myMov.ChangeSpeed(0);
+
+    }
+    public void Lost()
+    {
+        lost.SetActive(true);
+        hud.SetActive(false);
+        myMov.ChangeSpeed(0);
+    }
+
+     
 }
 

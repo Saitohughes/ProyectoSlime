@@ -38,7 +38,9 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         //linea de testing
-        acction = Input.GetKey(KeyCode.Q);
+
+        //acction = Input.GetKey(KeyCode.Q); 
+
 
         if (acction == false && see== false)
             if (instruction.Equals("Box") && interact != null)
