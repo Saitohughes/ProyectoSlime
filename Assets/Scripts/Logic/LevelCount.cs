@@ -22,7 +22,7 @@ public class LevelCount : MonoBehaviour
         {
             instance = this;
         }
-
+       // PlayerPrefs.DeleteAll();
         DontDestroyOnLoad(gameObject);
         mycount = PlayerPrefs.GetInt("turorialProgress", mycount); ;
     }
