@@ -24,7 +24,13 @@ public class LevelCount : MonoBehaviour
         }
 
         DontDestroyOnLoad(gameObject);
-        mycount = PlayerPrefs.GetInt("turorialProgress", mycount); ;
+#if UNITY_EDITOR
+        PlayerPrefs.SetInt("turorialProgress", 0);
+        PlayerPrefs.SetInt("turorialProgress", mycount);
+#endif
+
+        mycount = PlayerPrefs.GetInt("turorialProgress", mycount); 
+
     }
 
     public int Mycount { get => mycount; }
@@ -33,4 +39,5 @@ public class LevelCount : MonoBehaviour
         mycount++;
         PlayerPrefs.SetInt("turorialProgress", mycount);
     }
+
 }
