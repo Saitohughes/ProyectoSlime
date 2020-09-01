@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5165393195860012917
 Transform:
   m_ObjectHideFlags: 0
@@ -1039,8 +1039,8 @@ ParticleSystem:
         serializedVersion: 2
         m_Curve:
         - serializedVersion: 3
-          time: 0
-          value: 1
+          time: 0.0023155212
+          value: 0.7297306
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -1048,14 +1048,14 @@ ParticleSystem:
           inWeight: 0
           outWeight: 0
         - serializedVersion: 3
-          time: 0.32286245
-          value: 0.28282943
-          inSlope: -1.4654993
-          outSlope: -1.4654993
+          time: 0.524274
+          value: 0.5531042
+          inSlope: -1.6759182
+          outSlope: -1.6759182
           tangentMode: 0
           weightedMode: 0
           inWeight: 0.33333334
-          outWeight: 0.20006716
+          outWeight: 0.21326174
         - serializedVersion: 3
           time: 1
           value: 0
@@ -4816,7 +4816,7 @@ ParticleSystemRenderer:
   m_ApplyActiveColorSpace: 1
   m_AllowRoll: 1
   m_VertexStreams: 00010304
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
