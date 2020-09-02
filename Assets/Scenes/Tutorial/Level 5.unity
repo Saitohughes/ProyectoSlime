@@ -3088,6 +3088,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door
       objectReference: {fileID: 0}
+    - target: {fileID: 1346046924017021404, guid: c04ef98bb2077c64d8b1f00d1949d874,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.66
+      objectReference: {fileID: 0}
     - target: {fileID: 1652275343489143490, guid: c04ef98bb2077c64d8b1f00d1949d874,
         type: 3}
       propertyPath: minHigh
