@@ -38,8 +38,9 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         //linea de testing
-
-        //acction = Input.GetKey(KeyCode.Q); 
+#if UNITY_EDITOR
+        acction = Input.GetKey(KeyCode.Q); 
+#endif
 
 
         if (acction == false && see== false)
@@ -49,7 +50,7 @@ public class PlayerController : MonoBehaviour
                 myMov.CanHead(true);
                 interact.GetComponent<BoxMove>().NoGrab();
                 instruction = "Null";
-             }
+            }
 
         if (instruction.Equals("Metal") && interact != null)
         {
