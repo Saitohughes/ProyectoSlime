@@ -8,7 +8,7 @@ public class PathFinder : MonoBehaviour
     
     NavMeshAgent agent;
 
-    [SerializeField] public Transform target;
+    public Transform target;
 
     void Awake()
     {

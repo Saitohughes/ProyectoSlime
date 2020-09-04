@@ -6,8 +6,11 @@ using UnityEngine.AI;
 public class FriendAI : MonoBehaviour
 {
     GameController myController;
+
     [SerializeField] int state = 0; //0 Guard, 1 Exit
+
     [SerializeField] bool mylife, win;
+
     [SerializeField] Transform targetSafe;
     [SerializeField] Transform myself;
     [SerializeField] Transform targetGuard;
@@ -30,7 +33,7 @@ public class FriendAI : MonoBehaviour
     void Update()
     {
         
-        if (state == 0) // dejeme solo
+        if (state == 0) // idle
         {
             pathFinder.target = targetGuard;
 
