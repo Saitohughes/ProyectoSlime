@@ -1,7 +1,25 @@
 fileFormatVersion: 2
 guid: 0c40614f5939daf488a1a0d619a159ee
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -6973050480888913026
+    second: NewCanvas4_0
+  - first:
+      213: 7626885599772302458
+    second: NewCanvas4_1
+  - first:
+      213: 2439556799851851553
+    second: NewCanvas4_2
+  - first:
+      213: -5014258418724360662
+    second: NewCanvas4_3
+  - first:
+      213: 1624064873058681670
+    second: NewCanvas4_4
+  - first:
+      213: -8439276656121491042
+    second: NewCanvas4_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -40,7 +58,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -97,7 +115,133 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: NewCanvas4_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 719
+        width: 397
+        height: 361
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e73efbd488fba3f90800000000000000
+      internalID: -6973050480888913026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewCanvas4_1
+      rect:
+        serializedVersion: 2
+        x: 1248
+        y: 807
+        width: 672
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7c58f44b0428d960800000000000000
+      internalID: 7626885599772302458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewCanvas4_2
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 703
+        width: 26
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12fee80fbfb0bd120800000000000000
+      internalID: 2439556799851851553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewCanvas4_3
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 611
+        width: 10
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2e2cebe886c96ab0800000000000000
+      internalID: -5014258418724360662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewCanvas4_4
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 0
+        width: 376
+        height: 409
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6434adab566d98610800000000000000
+      internalID: 1624064873058681670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewCanvas4_5
+      rect:
+        serializedVersion: 2
+        x: 1371
+        y: 0
+        width: 549
+        height: 394
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e91d1ae289aa1ea80800000000000000
+      internalID: -8439276656121491042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

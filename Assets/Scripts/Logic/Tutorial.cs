@@ -12,6 +12,7 @@ public class Tutorial : MonoBehaviour
         if (!hiden)
         {
             tutorial.SetActive(true);
+            Time.timeScale = 0f;
         }
     }
 
@@ -19,5 +20,6 @@ public class Tutorial : MonoBehaviour
     {
         hiden = false;
         tutorial.SetActive(false);
+        Time.timeScale = 1f;
     }
 }
