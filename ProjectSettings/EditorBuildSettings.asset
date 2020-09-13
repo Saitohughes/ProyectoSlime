@@ -33,6 +33,21 @@ EditorBuildSettings:
     path: Assets/Scenes/Tutorial/FirstLevel.unity
     guid: 3f48f5abb57504a45824cc0cf217f383
   - enabled: 1
+    path: Assets/Scenes/Mundo 1/M1N1.unity
+    guid: fd46ec0baf7cc4749aeb368fa6800f2e
+  - enabled: 1
+    path: Assets/Scenes/Mundo 1/M1N2.unity
+    guid: f2a3afc65bfe8914a823d9b992afb2ca
+  - enabled: 1
+    path: Assets/Scenes/Mundo 1/M1N3.unity
+    guid: 3cd8aa577577a6342a87b9c1d719c1cd
+  - enabled: 1
+    path: Assets/Scenes/Mundo 1/M1N4.unity
+    guid: 8a281d5685c4b684b8353bf048bb5de1
+  - enabled: 1
+    path: Assets/Scenes/Mundo 1/M1N5.unity
+    guid: 5530ee98f4c660943b05f696f70c856b
+  - enabled: 1
     path: Assets/Scenes/SelectorScreen.unity
     guid: be026f0a83aa47f429ec4ba7fd3047fe
   m_configObjects: {}
