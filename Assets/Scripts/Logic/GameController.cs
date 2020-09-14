@@ -14,6 +14,7 @@ public class GameController : MonoBehaviour
     [SerializeField] float timeStart, time;
     [SerializeField] bool go = false, oneTime, start;
     [SerializeField] float wardTime;
+    [SerializeField] Button skipVelocity;
     PlayerMovement myMov;
     private void Awake()
     {
@@ -21,7 +22,6 @@ public class GameController : MonoBehaviour
     }
     void Start()
     {
-    
         timeStart = time;
         timeCount.text = time.ToString("F0");
         start = true;
@@ -43,7 +43,13 @@ public class GameController : MonoBehaviour
             PuzzleActive();
             go = true;
             oneTime = true;
+            PlayerMovement.Instance.ChangeSpeed(0f);
+            skipVelocity.gameObject.SetActive(true);
         }
+    }
+   public void SkipMovement(float velocity = 2)
+    {
+        Time.timeScale = velocity;
     }
  
     public void Timer()
@@ -75,19 +81,24 @@ public class GameController : MonoBehaviour
     {
         for (int i = 0; i < enemys.Count; i++)
         {
-            enemys[i].layer = 9;
+            if (enemys[i] != null)
+            {
+                enemys[i].layer = 9; 
+            }
         }
     }
     public void GameOver(bool stop)
     {
+        
         if (stop)
         {
             Win();
+            SkipMovement(1);
         }
         else
         {
             Lost();
-            
+            SkipMovement(1);
         }  
     }
     void Update()

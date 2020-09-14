@@ -7,6 +7,9 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public static PlayerMovement instance;
+    public static PlayerMovement Instance { get => instance; }
+
     [SerializeField] float speed, originalSpeed, horizontal, vertical; //variabñle que va a controlar la velocidad del personaje
     [SerializeField] Rigidbody myRig; //componente necesaria
     Animator myAnim;
@@ -18,6 +21,12 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     private void Awake()
     {
+
+        if (instance != null)
+        {
+            Destroy(this);
+        }
+        instance = this;
         originalSpeed = speed;
         myRig =gameObject.GetComponent<Rigidbody>(); //Se define el valor de la componente que vamos a modificar 
         myAnim = GetComponentInChildren<Animator>();

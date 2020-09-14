@@ -7,7 +7,7 @@ using UnityEngine.UIElements;
 
 public class PlayerController : MonoBehaviour
 {
-    // Start is called before the first frame update
+   
     GameController myController;
 
     [SerializeField] string instruction;
@@ -16,13 +16,21 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float meltTime;
     [SerializeField] bool mylife, see;
     PlayerMovement myMov;
-
+    public static PlayerController instance;
+    public static PlayerController Instance { get => instance; }
 
     public bool acction;
     public Joystick joystick;
     private void Awake()
     {
+        if (instance != null)
+        {
+            Destroy(this);
+        }
+
+        instance = this;
         myMov = GetComponent<PlayerMovement>();
+        
     }
     void Start()
     {

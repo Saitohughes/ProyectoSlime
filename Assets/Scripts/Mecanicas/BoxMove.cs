@@ -41,7 +41,7 @@ public class BoxMove : MonoBehaviour
 
     public void NoGrab() //funcion que se encarga de soltar la caja
     {
-        GetComponentInParent<PlayerController>().ChangeAcction(false);
+        //GetComponentInParent<PlayerController>().ChangeAcction(false);
         gameObject.transform.parent = null;
         playerMov.RestoreSpeed();
         gameObject.layer = 11;
