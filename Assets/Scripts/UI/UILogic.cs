@@ -6,7 +6,7 @@ using DG.Tweening;
 
 public class UILogic : MonoBehaviour
 {
-    [SerializeField] RectTransform main, world_T, world_1, world_2;
+    [SerializeField] RectTransform main, world_T, world_1, world_2,shop;
     [SerializeField] float time, delay;
     public void MoveWorld_T(int world)
     {
@@ -25,7 +25,7 @@ public class UILogic : MonoBehaviour
     {
         if (world == 0)
         {
-            MoveUI(main, new Vector2(0, -1080), time, delay, Ease.InBounce);
+            MoveUI(main, new Vector2(1920, 0), time, delay, Ease.InBounce);
             MoveUI(world_1, new Vector2(0, 0), time, delay, Ease.InBounce);
         }
         if (world == 1)
@@ -38,7 +38,7 @@ public class UILogic : MonoBehaviour
     {
         if (world == 0)
         {
-            MoveUI(main, new Vector2(0, -1080), time, delay, Ease.InBounce);
+            MoveUI(main, new Vector2(-1920, 0), time, delay, Ease.InBounce);
             MoveUI(world_2, new Vector2(0, 0), time, delay, Ease.InBounce);
         }
         if (world == 1)
@@ -51,5 +51,17 @@ public class UILogic : MonoBehaviour
     {
         rectTransform.DOAnchorPos(position, moveTime).SetDelay(delay).SetEase(ease);  
     }
-
+    public void MoveShop(int world)
+    {
+        if (world == 0)
+        {
+            MoveUI(main, new Vector2(0, 1080), time, delay, Ease.InBounce);
+            MoveUI(shop, new Vector2(0, 0), time, delay, Ease.InBounce);
+        }
+        if (world == 1)
+        {
+            MoveUI(main, new Vector2(0, 0), time, delay, Ease.InBounce);
+            MoveUI(shop, new Vector2(0, -1080), time, delay, Ease.InBounce);
+        }
+    }
 }
