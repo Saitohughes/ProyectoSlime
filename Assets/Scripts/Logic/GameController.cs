@@ -89,16 +89,14 @@ public class GameController : MonoBehaviour
     }
     public void GameOver(bool stop)
     {
-        
+        SkipMovement(1);
         if (stop)
         {
             Win();
-            SkipMovement(1);
         }
         else
         {
             Lost();
-            SkipMovement(1);
         }  
     }
     void Update()
