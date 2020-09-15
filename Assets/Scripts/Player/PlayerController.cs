@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
     PlayerMovement myMov;
     public static PlayerController instance;
     public static PlayerController Instance { get => instance; }
+    public string Instruction { get => instruction; private set => instruction = value; }
 
     public bool acction;
     public Joystick joystick;
