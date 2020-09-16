@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 3852997889628741210}
   - component: {fileID: 3852997889628741211}
   - component: {fileID: 3852997889628741031}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Dragon
   m_TagString: Friend
   m_Icon: {fileID: 0}
@@ -212,7 +212,6 @@ MonoBehaviour:
   targetSafe: {fileID: 0}
   myself: {fileID: 3852997889628741024}
   targetGuard: {fileID: 3852997889985791407}
-  followDistance: 0
 --- !u!195 &3852997889628741208
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -305,7 +304,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3852997889723071681}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
