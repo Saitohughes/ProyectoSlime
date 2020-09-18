@@ -12540,7 +12540,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myMoney: 1000
-  inventory: 010000000100000001000000
+  inventory: 000000000000000000000000
 --- !u!4 &2089244902
 Transform:
   m_ObjectHideFlags: 0
