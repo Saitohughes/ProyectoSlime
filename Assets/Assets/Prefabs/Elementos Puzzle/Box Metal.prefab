@@ -62,7 +62,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   melt: {fileID: 5165393197613498178, guid: 95aebbc07385af347866b6815ad9d317, type: 3}
   visualmelt: {fileID: 7063060971236250353}
-  see_VE: 0
+  moveEase: 1
+  time: 3.49
+  scale: 1.984
 --- !u!1 &2431640024370942361
 GameObject:
   m_ObjectHideFlags: 0
@@ -236,7 +238,7 @@ PrefabInstance:
     - target: {fileID: 5165393197613498177, guid: af5d4581d02f98040a36fad153ab6d69,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.384
       objectReference: {fileID: 0}
     - target: {fileID: 5165393197613498177, guid: af5d4581d02f98040a36fad153ab6d69,
         type: 3}

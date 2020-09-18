@@ -1,14 +1,26 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class MetalBox : MonoBehaviour
 {
     [SerializeField] ParticleSystem melt;
     [SerializeField] GameObject visualmelt;
 
-    // Start is called before the first frame update
 
+    public Ease moveEase = Ease.Linear;
+    [SerializeField] float time;
+    [Range(3f, 1f)] public float scale;
+
+
+    Vector3 originalScale;
+
+    // Start is called before the first frame update
+    private void Awake()
+    {
+        originalScale = transform.localScale;
+    }
     public void Melt()
     {
         OffVisualMelt();
@@ -18,11 +30,14 @@ public class MetalBox : MonoBehaviour
     }
     void OffVisualMelt()
     {
+        DOTween.Clear();
+        transform.localScale = originalScale;
         visualmelt.SetActive(false);
     }
     void OnVisualMelt()
     {
         visualmelt.SetActive(true);
+        DOTween.Sequence().Append(transform.DOScale(scale, time)).SetEase(moveEase);
     }
     private void OnTriggerStay(Collider other)
     {
@@ -32,18 +47,20 @@ public class MetalBox : MonoBehaviour
             if (PlayerController.Instance.acction == true)
             {
                 OnVisualMelt();
+
             }
             else
             {
-                OffVisualMelt();
+                OffVisualMelt();    
             }
         }
+        
     }
     private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.layer == 8)
         {
-            OffVisualMelt();
+            OffVisualMelt();   
         }
     }
 }
