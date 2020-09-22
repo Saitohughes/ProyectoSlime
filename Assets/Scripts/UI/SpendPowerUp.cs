@@ -8,12 +8,15 @@ public class SpendPowerUp : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI[] inventory;
     [SerializeField] private PlayerInventory myInventory;
+    [SerializeField] GameObject hud;
    
     private int count;
 
     public void Awake()
     {
         Actualize();
+        hud.SetActive(false);
+        Time.timeScale = 0;
 
         for (int i = 0; i < inventory.Length; i++)
         {
@@ -25,7 +28,7 @@ public class SpendPowerUp : MonoBehaviour
 
         if(count == 3)
         {
-            gameObject.SetActive(false);
+            Close();
         }
     }
 
@@ -46,6 +49,14 @@ public class SpendPowerUp : MonoBehaviour
         myInventory.Inventory[handicapSelected] -= 1;
         Actualize();
         gameObject.SetActive(false);
+        hud.SetActive(true);
+    }
+
+    public void Close()
+    {
+        Time.timeScale = 1;
+        gameObject.SetActive(false);
+        hud.SetActive(true);
     }
 
 }
