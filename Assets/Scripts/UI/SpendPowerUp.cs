@@ -8,7 +8,7 @@ public class SpendPowerUp : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI[] inventory;
     [SerializeField] private PlayerInventory myInventory;
-
+   
     private int count;
 
     public void Awake()
