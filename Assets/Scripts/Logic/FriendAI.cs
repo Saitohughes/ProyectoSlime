@@ -11,6 +11,8 @@ public class FriendAI : MonoBehaviour
 
     [SerializeField] bool mylife, win;
 
+    [SerializeField] GameObject confetti;
+
     [SerializeField] Transform targetSafe;
     [SerializeField] Transform myself;
     [SerializeField] Transform targetGuard;
@@ -72,9 +74,9 @@ public class FriendAI : MonoBehaviour
     }
     public void Win()
     {
-        
         StateModification(2);
         myController.GameOver(Stop());
+        confetti.SetActive(true);
     }
     
     private void OnCollisionEnter(Collision collision)
