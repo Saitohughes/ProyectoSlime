@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4058083434266140644}
   - component: {fileID: 1086188467921152425}
   - component: {fileID: 7801586315556539088}
+  - component: {fileID: 1866677166726120644}
   m_Layer: 11
   m_Name: key
   m_TagString: Key
@@ -93,6 +94,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myDoor: {fileID: 1652275343489143490}
+--- !u!65 &1866677166726120644
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 258436726831800460}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.376474, y: 1.1660055, z: 1.1105847}
+  m_Center: {x: -0.00000047683716, y: -0.042658806, z: 0.0020821095}
 --- !u!1 &656317966938996653
 GameObject:
   m_ObjectHideFlags: 0
