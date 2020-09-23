@@ -668,7 +668,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 430952860}
-        m_MethodName: BackMenu
+        m_MethodName: GoComic
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

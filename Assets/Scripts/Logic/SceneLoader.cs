@@ -30,6 +30,10 @@ public class SceneLoader : MonoBehaviour
     {
         Application.Quit();
     }
+    public void GoComic()
+    {
+        SceneManager.LoadScene("Comic");
+    }
     public void LoadMainMenu()
     {
         SceneManager.LoadScene("Main Menu");

@@ -54,6 +54,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Mundo 2/M2N1.unity
     guid: f401c38f3adb5384aae412ae562727dd
   - enabled: 1
+    path: Assets/Scenes/Comic.unity
+    guid: 1cd2a6e898b04714480eefc8b8fcece4
+  - enabled: 1
     path: Assets/Scenes/SelectorScreen.unity
     guid: be026f0a83aa47f429ec4ba7fd3047fe
   m_configObjects: {}

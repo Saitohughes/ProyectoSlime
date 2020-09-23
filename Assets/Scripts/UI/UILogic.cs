@@ -64,4 +64,13 @@ public class UILogic : MonoBehaviour
             MoveUI(shop, new Vector2(0, -1080), time, delay, Ease.InBounce);
         }
     }
+
+    public void ChangePage(RectTransform rect)
+    {
+        MoveUI(rect, new Vector2(1920, 0), time, delay, Ease.InBack);
+    }
+    public void BackPage(RectTransform rect)
+    {
+        MoveUI(rect, new Vector2(0, 0), time, delay, Ease.InBack);
+    }
 }
