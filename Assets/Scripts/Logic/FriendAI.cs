@@ -77,8 +77,9 @@ public class FriendAI : MonoBehaviour
     public void Win()
     {
         StateModification(2);
-        myController.GameOver(Stop());
         confetti.SetActive(true);
+        myController.GameOver(Stop());
+        
     }
     
     private void OnCollisionEnter(Collision collision)
