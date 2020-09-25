@@ -27,7 +27,7 @@ public class FriendAI : MonoBehaviour
         mylife = true;
         myController = FindObjectOfType<GameController>();
         pathFinder = GetComponent<PathFinder>();
-        //animator = GetComponent<Animator>();
+        animator = GetComponent<Animator>();
         targetSafe = GameObject.FindGameObjectWithTag("Exit").GetComponent<Transform>();
     }
 
@@ -44,11 +44,13 @@ public class FriendAI : MonoBehaviour
         {
 
             pathFinder.target = targetSafe;
+            animator.SetBool("Move", true);
 
         }
         else if (state == 2) //Dead
         {
             pathFinder.target = myself;
+            animator.SetBool("Move", false);
         }
 
     }
