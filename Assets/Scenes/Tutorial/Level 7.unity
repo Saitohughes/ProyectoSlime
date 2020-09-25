@@ -36133,6 +36133,16 @@ PrefabInstance:
       propertyPath: layerMask.m_Bits
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 1077195850553191549, guid: 0eb19fb682d030048925375c720e5f01,
+        type: 3}
+      propertyPath: m_Range
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 1077195850553191549, guid: 0eb19fb682d030048925375c720e5f01,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 35
+      objectReference: {fileID: 0}
     - target: {fileID: 8350207017385556563, guid: 0eb19fb682d030048925375c720e5f01,
         type: 3}
       propertyPath: m_LocalRotation.x
