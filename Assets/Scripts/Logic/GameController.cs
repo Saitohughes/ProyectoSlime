@@ -18,7 +18,7 @@ public class GameController : MonoBehaviour
     [SerializeField] float wardTime;
     [SerializeField] Button skipVelocity;
     PlayerMovement myMov;
-
+    
     [SerializeField] int scene;
     private void Awake()
     {

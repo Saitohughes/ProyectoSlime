@@ -9,6 +9,7 @@ public class BoxMove : MonoBehaviour
     PlayerMovement playerMov;
     BoxCollider myCollider;
     [SerializeField] bool grab = false;
+    [SerializeField] GameObject help;
     
     private void Awake()
     {
@@ -47,4 +48,22 @@ public class BoxMove : MonoBehaviour
         gameObject.layer = 11;
         grab=false;
     }
+    /*private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.layer == 8)
+        {
+           
+            if (help != null)
+                help.SetActive(false);
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.layer == 8)
+        {
+            if (help != null)
+                help.SetActive(true);
+        }
+    }
+    */
 }
