@@ -7,11 +7,12 @@ public class MetalBox : MonoBehaviour
 {
     [SerializeField] ParticleSystem melt;
     [SerializeField] GameObject visualmelt;
+    [SerializeField] GameObject boxBody;
 
 
     public Ease moveEase = Ease.Linear;
     [SerializeField] float time;
-    [Range(3f, 1f)] public float scale;
+    [Range(1f, 0.5f)] public float scale;
 
 
     Vector3 originalScale;
@@ -31,13 +32,13 @@ public class MetalBox : MonoBehaviour
     void OffVisualMelt()
     {
         DOTween.Clear();
-        transform.localScale = originalScale;
+        //transform.localScale = originalScale;
         visualmelt.SetActive(false);
     }
     void OnVisualMelt()
     {
         visualmelt.SetActive(true);
-        DOTween.Sequence().Append(transform.DOScale(scale, time)).SetEase(moveEase);
+        DOTween.Sequence().Append(boxBody.transform.DOScale(scale, time)).SetEase(moveEase);
     }
     private void OnTriggerStay(Collider other)
     {
@@ -47,7 +48,6 @@ public class MetalBox : MonoBehaviour
             if (PlayerController.Instance.acction == true)
             {
                 OnVisualMelt();
-
             }
             else
             {

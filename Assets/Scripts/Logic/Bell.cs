@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class Bell : MonoBehaviour
 {
-    [SerializeField] GameObject guard;
+    [SerializeField] GameObject guard, effect;
 
     public void CallGuard()
     {
         guard.gameObject.GetComponent<EnemyAI>().StateModification(1);
+        effect.SetActive(false);
     }
 }
