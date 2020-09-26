@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 
 public class GameController : MonoBehaviour
 {
@@ -16,9 +18,12 @@ public class GameController : MonoBehaviour
     [SerializeField] float wardTime;
     [SerializeField] Button skipVelocity;
     PlayerMovement myMov;
+
+    [SerializeField] int scene;
     private void Awake()
     {
         myMov = FindObjectOfType<PlayerMovement>();
+        scene = SceneManager.GetActiveScene().buildIndex;
     }
     void Start()
     {
@@ -120,10 +125,11 @@ public class GameController : MonoBehaviour
     public void Win()
     {
         win.SetActive(true);
-        LevelCount.Instance.UpdateCount();
+        if(LevelCount.Instance.Mycount < scene)
+            LevelCount.Instance.UpdateCount();
         hud.SetActive(false);
         myMov.ChangeSpeed(0);
-
+        
     }
     public void Lost()
     {

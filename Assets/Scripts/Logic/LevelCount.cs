@@ -30,7 +30,6 @@ public class LevelCount : MonoBehaviour
 #endif
 
         mycount = PlayerPrefs.GetInt("turorialProgress", mycount); 
-
     }
 
     public int Mycount { get => mycount; }

@@ -19899,6 +19899,7 @@ MonoBehaviour:
   start: 0
   wardTime: 0
   skipVelocity: {fileID: 212669283}
+  scene: 6
 --- !u!4 &1008766933
 Transform:
   m_ObjectHideFlags: 0

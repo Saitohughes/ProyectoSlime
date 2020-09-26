@@ -21917,6 +21917,7 @@ MonoBehaviour:
   start: 0
   wardTime: 0
   skipVelocity: {fileID: 539884359}
+  scene: 7
 --- !u!4 &1008766933
 Transform:
   m_ObjectHideFlags: 0
@@ -38721,7 +38722,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1276759804, guid: 0eb19fb682d030048925375c720e5f01, type: 3}
       propertyPath: layerMask.m_Bits
-      value: 4294967295
+      value: 32311
       objectReference: {fileID: 0}
     - target: {fileID: 1077195850553191549, guid: 0eb19fb682d030048925375c720e5f01,
         type: 3}
