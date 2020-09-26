@@ -46,8 +46,5 @@ public class BoxMove : MonoBehaviour
         playerMov.RestoreSpeed();
         gameObject.layer = 11;
         grab=false;
-
-
-
     }
 }
