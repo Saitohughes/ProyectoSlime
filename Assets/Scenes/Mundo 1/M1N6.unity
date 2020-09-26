@@ -6568,8 +6568,8 @@ GameObject:
   - component: {fileID: 783217528}
   - component: {fileID: 783217527}
   m_Layer: 0
-  m_Name: Cube
-  m_TagString: Untagged
+  m_Name: Muerte Instantanea
+  m_TagString: DeathFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12977,7 +12977,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh921768
+  m_Name: pb_Mesh46354
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
