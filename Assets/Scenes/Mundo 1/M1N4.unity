@@ -16643,6 +16643,21 @@ PrefabInstance:
       propertyPath: myTransform
       value: 
       objectReference: {fileID: 1729895991}
+    - target: {fileID: 2491126033465838329, guid: c04ef98bb2077c64d8b1f00d1949d874,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.165
+      objectReference: {fileID: 0}
+    - target: {fileID: 2491126033465838329, guid: c04ef98bb2077c64d8b1f00d1949d874,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2491126033465838329, guid: c04ef98bb2077c64d8b1f00d1949d874,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.9534425
+      objectReference: {fileID: 0}
     - target: {fileID: 2652967103377458846, guid: c04ef98bb2077c64d8b1f00d1949d874,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -16712,6 +16727,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 5.0276985
+      objectReference: {fileID: 0}
+    - target: {fileID: 4985502722198164509, guid: c04ef98bb2077c64d8b1f00d1949d874,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5469375389867968800, guid: c04ef98bb2077c64d8b1f00d1949d874,
         type: 3}

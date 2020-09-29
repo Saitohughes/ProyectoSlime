@@ -16037,6 +16037,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 5.0276985
       objectReference: {fileID: 0}
+    - target: {fileID: 4851662521137200429, guid: c04ef98bb2077c64d8b1f00d1949d874,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 140f173ccc3d652479d02bfedd649d03, type: 2}
     - target: {fileID: 5469375389867968800, guid: c04ef98bb2077c64d8b1f00d1949d874,
         type: 3}
       propertyPath: myDoor
@@ -16075,7 +16080,7 @@ PrefabInstance:
     - target: {fileID: 6353150233261841009, guid: c04ef98bb2077c64d8b1f00d1949d874,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.83
+      value: -8.37
       objectReference: {fileID: 0}
     - target: {fileID: 6353150233261841009, guid: c04ef98bb2077c64d8b1f00d1949d874,
         type: 3}
@@ -16087,6 +16092,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 3.38
       objectReference: {fileID: 0}
+    - target: {fileID: 6915666097905672737, guid: c04ef98bb2077c64d8b1f00d1949d874,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 140f173ccc3d652479d02bfedd649d03, type: 2}
     - target: {fileID: 7088758576703972559, guid: c04ef98bb2077c64d8b1f00d1949d874,
         type: 3}
       propertyPath: m_LocalRotation.y
