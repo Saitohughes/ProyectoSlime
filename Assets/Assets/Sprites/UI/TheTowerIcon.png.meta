@@ -105,10 +105,10 @@ TextureImporter:
       name: TheTowerIcon_0
       rect:
         serializedVersion: 2
-        x: 256
-        y: 81
-        width: 1428
-        height: 931
+        x: 249
+        y: 72
+        width: 1443
+        height: 948
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -125,7 +125,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: b22b4bce86516144095946018dd355ae
     internalID: 0
     vertices: []
     indices: 
