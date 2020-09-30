@@ -138,7 +138,7 @@ GameObject:
   - component: {fileID: 4529353971952687073}
   - component: {fileID: 4529353971952687074}
   - component: {fileID: 1514593349874467321}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: BoxPosition
   m_TagString: Pit
   m_Icon: {fileID: 0}
@@ -298,6 +298,10 @@ PrefabInstance:
     - target: {fileID: 1352063381225132, guid: 9a2d24d921f82644d9d46c815ae2af58, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1352063381225132, guid: 9a2d24d921f82644d9d46c815ae2af58, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4009197785811924, guid: 9a2d24d921f82644d9d46c815ae2af58, type: 3}
       propertyPath: m_LocalPosition.x
@@ -551,6 +555,10 @@ PrefabInstance:
     - target: {fileID: 1350488707794660, guid: 802643b115988c947a596650b7715bc4, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1350488707794660, guid: 802643b115988c947a596650b7715bc4, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4368508581684672, guid: 802643b115988c947a596650b7715bc4, type: 3}
       propertyPath: m_LocalPosition.x
