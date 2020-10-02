@@ -54,6 +54,21 @@ EditorBuildSettings:
     path: Assets/Scenes/Mundo 2/M2N1.unity
     guid: f401c38f3adb5384aae412ae562727dd
   - enabled: 1
+    path: Assets/Scenes/Mundo 2/M2N2.unity
+    guid: 6127fa4c43a7e4449a00bd6629d5ca0c
+  - enabled: 1
+    path: Assets/Scenes/Mundo 2/M2N3.unity
+    guid: 2af882295bcf84248ac5fad8813ad7c0
+  - enabled: 1
+    path: Assets/Scenes/Mundo 2/M2N4.unity
+    guid: 3808c807ebfc9e74fbea3f5da26c3d48
+  - enabled: 1
+    path: Assets/Scenes/Mundo 2/M2N5.unity
+    guid: cf3bd67889b73f44b9a79c10004c7710
+  - enabled: 1
+    path: Assets/Scenes/Mundo 2/M2N6.unity
+    guid: 274d8669a7d498d49bd2a82e70091e2f
+  - enabled: 1
     path: Assets/Scenes/Comic.unity
     guid: 1cd2a6e898b04714480eefc8b8fcece4
   - enabled: 1

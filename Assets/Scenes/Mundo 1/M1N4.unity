@@ -10808,7 +10808,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.3584906, g: 0.34665364, b: 0.34665364, a: 0}
+  m_BackGroundColor: {r: 0.14901961, g: 0.14901961, b: 0.14901961, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -11223,7 +11223,6 @@ MonoBehaviour:
   go: 0
   oneTime: 0
   start: 0
-  wardTime: 0
   skipVelocity: {fileID: 6271107218556347876}
   scene: 0
 --- !u!4 &1008766933
@@ -24560,7 +24559,7 @@ PrefabInstance:
     - target: {fileID: 5234932800683645858, guid: 97968a2a34181df4f9cc01ce1f2c7d33,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6271107218091466400, guid: 97968a2a34181df4f9cc01ce1f2c7d33,
         type: 3}

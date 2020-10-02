@@ -5889,6 +5889,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1008766933}
   - component: {fileID: 1008766932}
+  - component: {fileID: 1008766934}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -5919,7 +5920,6 @@ MonoBehaviour:
   go: 0
   oneTime: 0
   start: 0
-  wardTime: 0
   skipVelocity: {fileID: 447194206}
   scene: 1
 --- !u!4 &1008766933
@@ -5936,6 +5936,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1008766934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1008766931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a436dbc3f4de9ce448ecaeeafd52ced4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelValue: 100
+  multitly: 1
 --- !u!1 &1018349456 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1606643988052616, guid: 8bf7087f7bb7a1844a75fc35b8267a0f,

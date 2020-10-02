@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class PlayerInventory : MonoBehaviour
 {
-    [SerializeField] private float myMoney;
+    [SerializeField] private int myMoney;
     [SerializeField] private int[] inventory;
 
     public static PlayerInventory instance;
 
-    public float MyMoney { get => myMoney; set => myMoney = value; }
+    public int MyMoney { get => myMoney; set => myMoney = value; }
     public int[] Inventory { get => inventory; set => inventory = value; }
 
     private void Awake()
@@ -26,7 +26,7 @@ public class PlayerInventory : MonoBehaviour
 
 #if UNITY_EDITOR
         PlayerPrefs.SetInt("myMoney", 0);
-        PlayerPrefs.SetFloat("myMoney", MyMoney);
+        PlayerPrefs.SetInt("myMoney", MyMoney);
 
         PlayerPrefs.SetInt("mtInventory", 0);
         PlayerPrefs.SetInt("mtInventory", inventory[0]);
@@ -38,7 +38,7 @@ public class PlayerInventory : MonoBehaviour
         PlayerPrefs.SetInt("gmInventory", inventory[2]);
 #endif
 
-        MyMoney = PlayerPrefs.GetFloat("myMoney");
+        MyMoney = PlayerPrefs.GetInt("myMoney");
         inventory[0] = PlayerPrefs.GetInt("mtInventory");
         inventory[1] = PlayerPrefs.GetInt("smInventory");
         inventory[2] = PlayerPrefs.GetInt("gmInventory");

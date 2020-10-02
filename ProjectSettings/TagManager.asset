@@ -13,6 +13,8 @@ TagManager:
   - Bell
   - Time
   - DeathFloor
+  - Vision
+  - Enemy
   layers:
   - Default
   - TransparentFX

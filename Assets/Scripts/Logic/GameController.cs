@@ -15,13 +15,26 @@ public class GameController : MonoBehaviour
     [SerializeField] List<GameObject> enemys;
     [SerializeField] float timeStart, time;
     [SerializeField] bool go = false, oneTime, start;
-    [SerializeField] float wardTime;
     [SerializeField] Button skipVelocity;
     PlayerMovement myMov;
     
     [SerializeField] int scene;
+
+    public static GameController instance;
+
+    public static GameController Instance { get => instance; }
+
+    public float WardTime { get; private set; }
     private void Awake()
     {
+        if (instance != null)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            instance = this;
+        }
         myMov = FindObjectOfType<PlayerMovement>();
         scene = SceneManager.GetActiveScene().buildIndex;
     }
@@ -71,7 +84,7 @@ public class GameController : MonoBehaviour
         
         if (go && timeStart >= 0)
         {
-            wardTime = timeStart;
+            WardTime = timeStart;
             timeStart = 0;
             go = false;
         }
@@ -129,13 +142,18 @@ public class GameController : MonoBehaviour
             LevelCount.Instance.UpdateCount();
         hud.SetActive(false);
         myMov.ChangeSpeed(0);
-        
+        GetCash.Instance.CashValue(true);
     }
     public void Lost()
     {
         lost.SetActive(true);
         hud.SetActive(false);
         myMov.ChangeSpeed(0);
+
+    }
+    public void TimerPowerUp()
+    {
+        timeStart += 30f; 
     }
 
      

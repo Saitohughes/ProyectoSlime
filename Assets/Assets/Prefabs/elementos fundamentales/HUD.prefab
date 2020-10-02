@@ -324,7 +324,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1231381010980380162}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5214456592900013594}
+        m_MethodName: Close
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &898282611020894360
 GameObject:
   m_ObjectHideFlags: 0
@@ -1445,6 +1456,7 @@ MonoBehaviour:
   - {fileID: 8985995678974136586}
   myInventory: {fileID: 0}
   hud: {fileID: 6271107219099224283}
+  friend: {fileID: 0}
 --- !u!1 &5477597365700396320
 GameObject:
   m_ObjectHideFlags: 0
@@ -1664,7 +1676,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5dce67158656ba34797bc34d4fc21b5f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c5e11a35b13d5094cbd3760da301098f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3433,7 +3445,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000015259, y: -397.26}
+  m_AnchoredPosition: {x: 24, y: -436}
   m_SizeDelta: {x: 359.22812, y: 193.99998}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6271107219170406497
@@ -5939,13 +5951,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_MethodName: 
-        m_Mode: 1
+        m_MethodName: SkipMovement
+        m_Mode: 4
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 0
+          m_FloatArgument: 3
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2

@@ -70,9 +70,16 @@ public class FriendAI : MonoBehaviour
     }
     public void Lose()
     {
-        mylife = false;
-        StateModification(2);
-        myController.GameOver(Stop());
+        if (gameObject.GetComponent<Shield>() == null)
+        {
+            mylife = false;
+            StateModification(2);
+            myController.GameOver(Stop());
+        }
+        else
+        {
+            Shield.Instance.DestroyMe();
+        }
     }
     public void Win()
     {

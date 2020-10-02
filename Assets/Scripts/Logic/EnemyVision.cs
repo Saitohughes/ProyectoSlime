@@ -27,8 +27,8 @@ public class EnemyVision : MonoBehaviour
             currentHitDistance = informacion.distance; 
             if (informacion.collider.CompareTag("Friend"))
             {
-                Debug.Log("Collisione con el amigo");
                 informacion.collider.GetComponent<FriendAI>().Lose();
+                gameObject.SetActive(false);
             }         
             //vision = informacion.distance;
         }
