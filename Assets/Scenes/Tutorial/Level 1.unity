@@ -5910,7 +5910,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   friend: {fileID: 0}
-  win: {fileID: 2134922178}
+  win: {fileID: 2010418183}
   lost: {fileID: 2027623443}
   hud: {fileID: 1278623572}
   timeCount: {fileID: 1288792927}
@@ -5948,7 +5948,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a436dbc3f4de9ce448ecaeeafd52ced4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelValue: 100
   multitly: 1
 --- !u!1 &1018349456 stripped
 GameObject:
@@ -10248,7 +10247,7 @@ PrefabInstance:
     - target: {fileID: 6271107218091466402, guid: 97968a2a34181df4f9cc01ce1f2c7d33,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6271107218195219505, guid: 97968a2a34181df4f9cc01ce1f2c7d33,
         type: 3}
@@ -12953,6 +12952,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 30, y: 45, z: 0}
+--- !u!1 &2010418183 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2610807244805105383, guid: 97968a2a34181df4f9cc01ce1f2c7d33,
+    type: 3}
+  m_PrefabInstance: {fileID: 1882396737}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2012505173 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1606643988052616, guid: 8bf7087f7bb7a1844a75fc35b8267a0f,
@@ -13548,12 +13553,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.99999994, y: 1, z: 1.0000001}
   m_Center: {x: -0.000000059604645, y: 0.5, z: -0.0000019073486}
---- !u!1 &2134922178 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6271107218091466402, guid: 97968a2a34181df4f9cc01ce1f2c7d33,
-    type: 3}
-  m_PrefabInstance: {fileID: 1882396737}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2142212397 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1606643988052616, guid: 8bf7087f7bb7a1844a75fc35b8267a0f,

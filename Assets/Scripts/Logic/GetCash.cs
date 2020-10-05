@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class GetCash : MonoBehaviour
 {
-    [SerializeField] private int multitly=1;
+    [SerializeField] private int multitly = 1;
+    
     public static GetCash instance;
-
-    public int Cash { get; private set; }
     public static GetCash Instance { get => instance; }
 
+    public int Cash { get; private set; }
+    public int LastCash { get; private set; }
+    
+    public int Multitly { get => multitly; set => multitly = value; }
 
     private void Awake()
     {
@@ -23,17 +26,15 @@ public class GetCash : MonoBehaviour
         }
 
     }
-    void Start()
-    {
-        
-    }
     public void CashValue(bool winOfail)
     {
         if (winOfail)
         {
+            LastCash = PlayerInventory.instance.MyMoney;
             Cash = (50 + (int)GameController.Instance.WardTime) * multitly;
         }
         PlayerInventory.instance.MyMoney += Cash;
+        ScoreManager.Instance.ShowCash();
     }
     public void ChangeMultitly() 
     {

@@ -143,6 +143,7 @@ public class GameController : MonoBehaviour
         hud.SetActive(false);
         myMov.ChangeSpeed(0);
         GetCash.Instance.CashValue(true);
+
     }
     public void Lost()
     {
