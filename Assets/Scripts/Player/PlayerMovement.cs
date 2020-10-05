@@ -15,6 +15,7 @@ public class PlayerMovement : MonoBehaviour
     Animator myAnim;
     [SerializeField] bool canHead = true;
     public Joystick joystick;
+    AudioSource mySource;
 
     Vector3 mov,forward,right; //vector de movimiento
   
@@ -30,6 +31,7 @@ public class PlayerMovement : MonoBehaviour
         originalSpeed = speed;
         myRig =gameObject.GetComponent<Rigidbody>(); //Se define el valor de la componente que vamos a modificar 
         myAnim = GetComponentInChildren<Animator>();
+        mySource = gameObject.GetComponent<AudioSource>();
         forward = Camera.main.transform.forward;
         forward.y = 0;
         forward = Vector3.Normalize(forward);
@@ -82,9 +84,16 @@ public class PlayerMovement : MonoBehaviour
 
 
         if (mov.magnitude > 0)
+        {
             myAnim.SetBool("walk", true);
+            if (!mySource.isPlaying)
+                mySource.Play();
+        }
         else
+        {
             myAnim.SetBool("walk", false);
+            mySource.Stop();
+        }
     }
 
     public void CanHead(bool head)

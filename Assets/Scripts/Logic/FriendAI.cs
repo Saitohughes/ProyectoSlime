@@ -20,7 +20,7 @@ public class FriendAI : MonoBehaviour
 
     PathFinder pathFinder;
     Animator animator;
-
+    AudioSource mySource;
 
     void Awake()
     {
@@ -42,7 +42,7 @@ public class FriendAI : MonoBehaviour
         }
         else if (state == 1) // follow
         {
-
+            mySource.Play();
             pathFinder.target = targetSafe;
             animator.SetBool("Move", true);
 

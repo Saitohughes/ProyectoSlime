@@ -15,6 +15,9 @@ public class ShopManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI[] priceTxt;
     [SerializeField] private TextMeshProUGUI[] inventory;
 
+    [Header("Efectos de Sonido Tienda")]
+    [SerializeField] private AudioSource mySource;
+    [SerializeField] private AudioClip buyItem, cantBuy;
 
     public void Awake()
     {
@@ -55,7 +58,13 @@ public class ShopManager : MonoBehaviour
             myInventory.MyMoney -= price[handicapSelected];
             myInventory.Inventory[handicapSelected] += 1;
 
-            Actualize(); 
+            Actualize();
+
+            mySource.PlayOneShot(buyItem);
+        }
+        else
+        {
+            mySource.PlayOneShot(cantBuy, 0.2f);
         }
     }
 }

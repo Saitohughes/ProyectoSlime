@@ -15,7 +15,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] GameObject interact,armature;
     [SerializeField] float meltTime;
     [SerializeField] bool mylife, see;
+    [SerializeField] AudioSource mySource;
+    [SerializeField] AudioClip[] myClips;
     PlayerMovement myMov;
+    private int count;
     public static PlayerController instance;
     public static PlayerController Instance { get => instance; }
     public string Instruction { get => instruction; private set => instruction = value; }
@@ -31,6 +34,7 @@ public class PlayerController : MonoBehaviour
 
         instance = this;
         myMov = GetComponent<PlayerMovement>();
+        mySource = GameObject.FindGameObjectWithTag("VFX").GetComponent<AudioSource>();
         
     }
     void Start()
@@ -90,6 +94,7 @@ public class PlayerController : MonoBehaviour
             interact = null;
             see = false;
         }
+        count = 0;
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -102,64 +107,72 @@ public class PlayerController : MonoBehaviour
     private void OnTriggerStay(Collider collision)
     {
 
-            //interact = collision.gameObject;
-            if(collision.gameObject.CompareTag("Box"))
+        //interact = collision.gameObject;
+        if(collision.gameObject.CompareTag("Box"))
+        {
+            instruction = "Box";
+            interact = collision.gameObject; 
+            if (acction)
             {
-                instruction = "Box";
-                interact = collision.gameObject; 
-                if (acction)
+                Debug.Log("ACTIVE");
+                see = false;
+                interact.GetComponent<BoxMove>().Grab(gameObject);
+                armature.layer = 9;
+                if(!mySource.isPlaying)
                 {
-                    Debug.Log("ACTIVE");
-                    see = false;
-                    interact.GetComponent<BoxMove>().Grab(gameObject);
-                    armature.layer = 9; 
-                }
-
-            }
-            else if (collision.gameObject.CompareTag("Metal"))
-            {
-                instruction = "Metal";
-                interact = collision.gameObject;
-                if (acction)
-                {
-                    Debug.Log("ACTIVE");
-                    //armature.layer = 9;
-                    time += Time.deltaTime;                 
-                    if (time >= meltTime)
+                    if(count == 0)
                     {
-                        acction = false;
-                        interact.GetComponent<MetalBox>().Melt();
-                        see = false;
+                        count += 1;
+                        mySource.PlayOneShot(myClips[0]);
                     }
-               
                 }
             }
-            else if(collision.gameObject.CompareTag("Key"))
-            {
-                instruction = "Key";
 
-                if (acction)
-                {
-                    Debug.Log("ACTIVE");
-                    collision.gameObject.GetComponent<KeyMechanism>().ActivateDoor();
-                    instruction = "Null";
-                    acction = false;
-                    see = false;
-                }
-            }
-            else if(collision.gameObject.CompareTag("Bell"))
+        }
+        else if (collision.gameObject.CompareTag("Metal"))
+        {
+            instruction = "Metal";
+            interact = collision.gameObject;
+            if (acction)
             {
-                instruction = "Bell";
-                if (acction)
+                Debug.Log("ACTIVE");
+                //armature.layer = 9;
+                time += Time.deltaTime;                 
+                if (time >= meltTime)
                 {
-                    Debug.Log("ACTIVE");
-                    collision.gameObject.GetComponent<Bell>().CallGuard();
-                    instruction = "Null";
-                    collision.gameObject.layer = 9;
                     acction = false;
+                    interact.GetComponent<MetalBox>().Melt();
                     see = false;
                 }
+               
             }
+        }
+        else if(collision.gameObject.CompareTag("Key"))
+        {
+            instruction = "Key";
+
+            if (acction)
+            {
+                Debug.Log("ACTIVE");
+                collision.gameObject.GetComponent<KeyMechanism>().ActivateDoor();
+                instruction = "Null";
+                acction = false;
+                see = false;
+            }
+        }
+        else if(collision.gameObject.CompareTag("Bell"))
+        {
+            instruction = "Bell";
+            if (acction)
+            {
+                Debug.Log("ACTIVE");
+                collision.gameObject.GetComponent<Bell>().CallGuard();
+                instruction = "Null";
+                collision.gameObject.layer = 9;
+                acction = false;
+                see = false;
+            }
+        }
             
         
     }
@@ -172,7 +185,7 @@ public class PlayerController : MonoBehaviour
   */
 
     public void TrueAction()
-    { 
+    {
         acction = true;
     }
     public void FalseAction()

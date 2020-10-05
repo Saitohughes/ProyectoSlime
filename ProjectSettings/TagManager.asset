@@ -15,6 +15,7 @@ TagManager:
   - DeathFloor
   - Vision
   - Enemy
+  - VFX
   layers:
   - Default
   - TransparentFX
