@@ -7,10 +7,13 @@ public class DoorMechanism : MonoBehaviour
     [SerializeField] Transform myTransform,minHigh,actualhigh; //par amedir el movimiento tanto de la puerta como hacia donde lo pondremos
     bool descending, releasing; //comfirmamos que se realice el desplazamiento
 
+    AudioSource mySource;
+
     // Start is called before the first frame update
     private void Awake()
     {
         myTransform = GetComponent<Transform>();
+        mySource = GetComponent<AudioSource>();
         descending = false;
         releasing = false;
     }
@@ -23,6 +26,9 @@ public class DoorMechanism : MonoBehaviour
             transform.position += new Vector3(0, (1 * -1 * Time.deltaTime), 0);
         }
 
+        if (myTransform.position.y <= minHigh.position.y)
+            mySource.Stop();    
+
         if (releasing == true && myTransform.position.y < actualhigh.position.y)
         {
             transform.position += new Vector3(0, (1 * 1 * Time.deltaTime), 0);
@@ -33,6 +39,8 @@ public class DoorMechanism : MonoBehaviour
     {
         descending = true;
         releasing = false;
+
+        mySource.Play();
     }
     public void OnReleasing() //funcion que revisa si esta quieto
     {

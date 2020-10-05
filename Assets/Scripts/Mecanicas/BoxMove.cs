@@ -10,11 +10,13 @@ public class BoxMove : MonoBehaviour
     BoxCollider myCollider;
     [SerializeField] bool grab = false;
     [SerializeField] GameObject help;
+    AudioSource mySource;
     
     private void Awake()
     {
-          myCollider = GetComponent<BoxCollider>();
-          playerMov = FindObjectOfType<PlayerMovement>();
+        myCollider = GetComponent<BoxCollider>();
+        playerMov = FindObjectOfType<PlayerMovement>();
+        mySource = gameObject.GetComponent<AudioSource>();
         
           //myRig = GetComponent<Rigidbody>();
     }
@@ -37,6 +39,9 @@ public class BoxMove : MonoBehaviour
             playerMov.ChangeSpeed();
             gameObject.layer = 10;
             grab = true;
+
+            if (!mySource.isPlaying)
+                mySource.Play();
         }
     }
 
@@ -47,6 +52,7 @@ public class BoxMove : MonoBehaviour
         playerMov.RestoreSpeed();
         gameObject.layer = 11;
         grab=false;
+        mySource.Stop();
     }
     /*private void OnTriggerEnter(Collider other)
     {

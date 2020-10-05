@@ -9,7 +9,6 @@ public class MetalBox : MonoBehaviour
     [SerializeField] GameObject visualmelt;
     [SerializeField] GameObject boxBody;
 
-
     public Ease moveEase = Ease.Linear;
     [SerializeField] float time;
     [Range(1f, 0.5f)] public float scale;

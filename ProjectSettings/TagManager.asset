@@ -16,6 +16,7 @@ TagManager:
   - Vision
   - Enemy
   - VFX
+  - Music
   layers:
   - Default
   - TransparentFX

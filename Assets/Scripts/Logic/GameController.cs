@@ -17,6 +17,9 @@ public class GameController : MonoBehaviour
     [SerializeField] bool go = false, oneTime, start;
     [SerializeField] Button skipVelocity;
     PlayerMovement myMov;
+
+    AudioSource mySource, myMusic;
+    [SerializeField] AudioClip[] myClips;
     
     [SerializeField] int scene;
 
@@ -37,6 +40,8 @@ public class GameController : MonoBehaviour
         }
         myMov = FindObjectOfType<PlayerMovement>();
         scene = SceneManager.GetActiveScene().buildIndex;
+        mySource = gameObject.GetComponent<AudioSource>();
+        myMusic = GameObject.FindGameObjectWithTag("Music").GetComponent<AudioSource>();
     }
     void Start()
     {
@@ -63,7 +68,11 @@ public class GameController : MonoBehaviour
             oneTime = true;
             PlayerMovement.Instance.ChangeSpeed(0f);
             skipVelocity.gameObject.SetActive(true);
+
+            mySource.Stop();
+            mySource.PlayOneShot(myClips[0]);
         }
+
     }
    public void SkipMovement(float velocity = 2)
     {
@@ -72,12 +81,13 @@ public class GameController : MonoBehaviour
  
     public void Timer()
     {
+
         timeStart -= Time.deltaTime;
         if(timeStart >= 0)
         {
             timeCount.text = timeStart.ToString("F0");
         }
-        if(timeStart < 0)
+        else if(timeStart < 0)
         {
             timeCount.text = "0";
         }
@@ -144,6 +154,8 @@ public class GameController : MonoBehaviour
         myMov.ChangeSpeed(0);
         GetCash.Instance.CashValue(true);
 
+        myMusic.Stop();
+        mySource.PlayOneShot(myClips[1],0.5f);
     }
     public void Lost()
     {
@@ -151,6 +163,8 @@ public class GameController : MonoBehaviour
         hud.SetActive(false);
         myMov.ChangeSpeed(0);
 
+        myMusic.Stop();
+        mySource.PlayOneShot(myClips[2], 1f);
     }
     public void TimerPowerUp()
     {

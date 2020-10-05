@@ -123,7 +123,7 @@ public class PlayerController : MonoBehaviour
                     if(count == 0)
                     {
                         count += 1;
-                        mySource.PlayOneShot(myClips[0]);
+                        mySource.PlayOneShot(myClips[0],0.2f);
                     }
                 }
             }
@@ -137,12 +137,18 @@ public class PlayerController : MonoBehaviour
             {
                 Debug.Log("ACTIVE");
                 //armature.layer = 9;
-                time += Time.deltaTime;                 
+                time += Time.deltaTime;
+                if (count == 0)
+                {
+                    count += 1;
+                    mySource.PlayOneShot(myClips[1], 0.2f);
+                }
                 if (time >= meltTime)
                 {
                     acction = false;
                     interact.GetComponent<MetalBox>().Melt();
                     see = false;
+
                 }
                
             }
@@ -158,6 +164,11 @@ public class PlayerController : MonoBehaviour
                 instruction = "Null";
                 acction = false;
                 see = false;
+                if (count == 0)
+                {
+                    count += 1;
+                    mySource.PlayOneShot(myClips[2], 1f);
+                }
             }
         }
         else if(collision.gameObject.CompareTag("Bell"))
@@ -171,6 +182,11 @@ public class PlayerController : MonoBehaviour
                 collision.gameObject.layer = 9;
                 acction = false;
                 see = false;
+                if (count == 0)
+                {
+                    count += 1;
+                    mySource.PlayOneShot(myClips[3], 0.01f);
+                }
             }
         }
             

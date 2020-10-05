@@ -134,6 +134,12 @@ MonoBehaviour:
   meltTime: 3
   mylife: 0
   see: 0
+  mySource: {fileID: 0}
+  myClips:
+  - {fileID: 8300000, guid: 0f5bc1d134611cf4da510cdb8d41f7ca, type: 3}
+  - {fileID: 8300000, guid: 6fcd623a69f041d408cc00b30ca72ff9, type: 3}
+  - {fileID: 8300000, guid: e07565828189b994ba458e95445e719f, type: 3}
+  - {fileID: 8300000, guid: 4c2d0821f71b5bf4981a41ff921dc479, type: 3}
   acction: 0
   joystick: {fileID: 0}
 --- !u!136 &2640612538517239997

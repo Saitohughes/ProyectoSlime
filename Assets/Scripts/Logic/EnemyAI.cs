@@ -12,13 +12,14 @@ public class EnemyAI : MonoBehaviour
 
     PathFinder pathFinder;
     Animator animator;
+    AudioSource mySource;
 
 
     void Awake()
     {
         pathFinder = GetComponent<PathFinder>();
         //animator = GetComponent<Animator>();
-
+        mySource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -35,7 +36,6 @@ public class EnemyAI : MonoBehaviour
 
             pathFinder.target = target;
 
-
         }
 
     }
@@ -48,5 +48,6 @@ public class EnemyAI : MonoBehaviour
     {
         state = NewState;
         vision.SetActive(false);
+        mySource.Play();
     }
 }

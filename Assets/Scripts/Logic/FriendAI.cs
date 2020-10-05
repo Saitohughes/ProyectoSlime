@@ -29,6 +29,7 @@ public class FriendAI : MonoBehaviour
         pathFinder = GetComponent<PathFinder>();
         animator = GetComponent<Animator>();
         targetSafe = GameObject.FindGameObjectWithTag("Exit").GetComponent<Transform>();
+        mySource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -38,11 +39,14 @@ public class FriendAI : MonoBehaviour
         if (state == 0) // idle
         {
             pathFinder.target = targetGuard;
-
+            if (mySource.isPlaying)
+                mySource.Stop();
         }
         else if (state == 1) // follow
         {
-            mySource.Play();
+            if(!mySource.isPlaying)
+                mySource.Play();
+
             pathFinder.target = targetSafe;
             animator.SetBool("Move", true);
 
@@ -51,6 +55,8 @@ public class FriendAI : MonoBehaviour
         {
             pathFinder.target = myself;
             animator.SetBool("Move", false);
+            if (mySource.isPlaying)
+                mySource.Stop();
         }
 
     }
