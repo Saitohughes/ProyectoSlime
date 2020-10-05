@@ -8491,7 +8491,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &875223399 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 6271107218091466402, guid: 97968a2a34181df4f9cc01ce1f2c7d33,
+  m_CorrespondingSourceObject: {fileID: 2610807244805105383, guid: 97968a2a34181df4f9cc01ce1f2c7d33,
     type: 3}
   m_PrefabInstance: {fileID: 875223397}
   m_PrefabAsset: {fileID: 0}
@@ -9725,7 +9725,6 @@ MonoBehaviour:
   go: 0
   oneTime: 0
   start: 0
-  wardTime: 0
   skipVelocity: {fileID: 875223403}
   scene: 2
 --- !u!4 &1008766933

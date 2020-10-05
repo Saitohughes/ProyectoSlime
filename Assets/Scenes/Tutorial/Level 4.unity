@@ -11508,6 +11508,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97968a2a34181df4f9cc01ce1f2c7d33, type: 3}
+--- !u!1 &866361873 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2610807244805105383, guid: 97968a2a34181df4f9cc01ce1f2c7d33,
+    type: 3}
+  m_PrefabInstance: {fileID: 866361872}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &878548239
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13761,7 +13767,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   friend: {fileID: 0}
-  win: {fileID: 2083548345}
+  win: {fileID: 866361873}
   lost: {fileID: 788077146}
   hud: {fileID: 1439372}
   timeCount: {fileID: 1488736842}
@@ -13771,7 +13777,6 @@ MonoBehaviour:
   go: 0
   oneTime: 0
   start: 0
-  wardTime: 0
   skipVelocity: {fileID: 58320809}
   scene: 4
 --- !u!4 &1008766933
@@ -26380,12 +26385,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4877306186567854, guid: 8bf7087f7bb7a1844a75fc35b8267a0f,
     type: 3}
   m_PrefabInstance: {fileID: 2082880289}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &2083548345 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6271107218091466402, guid: 97968a2a34181df4f9cc01ce1f2c7d33,
-    type: 3}
-  m_PrefabInstance: {fileID: 866361872}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2099432682
 PrefabInstance:

@@ -410,6 +410,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 460465489, guid: 97968a2a34181df4f9cc01ce1f2c7d33, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 460465490, guid: 97968a2a34181df4f9cc01ce1f2c7d33, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -417,7 +421,7 @@ PrefabInstance:
     - target: {fileID: 460465491, guid: 97968a2a34181df4f9cc01ce1f2c7d33, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 7056ca12512624d40a3dcf60f5f58cbb,
+      objectReference: {fileID: 21300000, guid: 3f94433bf7c62f143b4c48756a7e6d5f,
         type: 3}
     - target: {fileID: 676466723, guid: 97968a2a34181df4f9cc01ce1f2c7d33, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -672,6 +676,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &34355007 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2610807244805105383, guid: 97968a2a34181df4f9cc01ce1f2c7d33,
+    type: 3}
+  m_PrefabInstance: {fileID: 34355005}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &43608589
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11535,7 +11545,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   friend: {fileID: 0}
-  win: {fileID: 1598392115}
+  win: {fileID: 34355007}
   lost: {fileID: 916375734}
   hud: {fileID: 254641615}
   timeCount: {fileID: 2064738110}
@@ -11545,7 +11555,6 @@ MonoBehaviour:
   go: 0
   oneTime: 0
   start: 0
-  wardTime: 0
   skipVelocity: {fileID: 34355006}
   scene: 5
 --- !u!4 &1008766933
@@ -21689,12 +21698,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4877306186567854, guid: 8bf7087f7bb7a1844a75fc35b8267a0f,
     type: 3}
   m_PrefabInstance: {fileID: 1591199530}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1598392115 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6271107218091466402, guid: 97968a2a34181df4f9cc01ce1f2c7d33,
-    type: 3}
-  m_PrefabInstance: {fileID: 34355005}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1600627251
 PrefabInstance:

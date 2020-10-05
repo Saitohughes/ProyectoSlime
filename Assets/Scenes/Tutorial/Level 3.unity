@@ -3800,6 +3800,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 460465489, guid: 97968a2a34181df4f9cc01ce1f2c7d33, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 460465490, guid: 97968a2a34181df4f9cc01ce1f2c7d33, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -3807,7 +3811,7 @@ PrefabInstance:
     - target: {fileID: 460465491, guid: 97968a2a34181df4f9cc01ce1f2c7d33, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 747d181dcc2d6c24a9e13f909de229c4,
+      objectReference: {fileID: 21300000, guid: 40056e1f1dc659e448bffd31176e5bfd,
         type: 3}
     - target: {fileID: 676466723, guid: 97968a2a34181df4f9cc01ce1f2c7d33, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -4052,6 +4056,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &327218122 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2610807244805105383, guid: 97968a2a34181df4f9cc01ce1f2c7d33,
+    type: 3}
+  m_PrefabInstance: {fileID: 327218120}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &334892931
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4613,12 +4623,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4877306186567854, guid: 8bf7087f7bb7a1844a75fc35b8267a0f,
     type: 3}
   m_PrefabInstance: {fileID: 371229212}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &377825033 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6271107218091466402, guid: 97968a2a34181df4f9cc01ce1f2c7d33,
-    type: 3}
-  m_PrefabInstance: {fileID: 327218120}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &386992164
 PrefabInstance:
@@ -14258,7 +14262,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   friend: {fileID: 0}
-  win: {fileID: 377825033}
+  win: {fileID: 327218122}
   lost: {fileID: 1418801225}
   hud: {fileID: 319898868}
   timeCount: {fileID: 1159175178}
@@ -14268,7 +14272,6 @@ MonoBehaviour:
   go: 0
   oneTime: 0
   start: 0
-  wardTime: 0
   skipVelocity: {fileID: 327218121}
   scene: 3
 --- !u!4 &1008766933

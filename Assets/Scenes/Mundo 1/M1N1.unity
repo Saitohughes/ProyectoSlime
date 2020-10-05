@@ -4125,12 +4125,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 480311637}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &483048257 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6271107218091466402, guid: 97968a2a34181df4f9cc01ce1f2c7d33,
-    type: 3}
-  m_PrefabInstance: {fileID: 6271107218556347875}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &498667530
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9464,7 +9458,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   friend: {fileID: 0}
-  win: {fileID: 483048257}
+  win: {fileID: 6271107218556347877}
   lost: {fileID: 2129298242}
   hud: {fileID: 549219640}
   timeCount: {fileID: 663150078}
@@ -9502,7 +9496,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a436dbc3f4de9ce448ecaeeafd52ced4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelValue: 200
   multitly: 1
 --- !u!1001 &1009726721
 PrefabInstance:
@@ -19892,3 +19885,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &6271107218556347877 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2610807244805105383, guid: 97968a2a34181df4f9cc01ce1f2c7d33,
+    type: 3}
+  m_PrefabInstance: {fileID: 6271107218556347875}
+  m_PrefabAsset: {fileID: 0}
