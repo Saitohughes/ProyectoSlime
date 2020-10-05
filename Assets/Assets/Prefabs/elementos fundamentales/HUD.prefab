@@ -576,11 +576,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1008766933}
   - component: {fileID: 1008766932}
-<<<<<<< HEAD
   - component: {fileID: 6038604829840926803}
-=======
-  - component: {fileID: 4772335262824300573}
->>>>>>> 05030f341a9e2603c0eab6cb2757c8955c965d44
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -631,20 +627,14 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 756370be967c622429c6aaf632879e6d, type: 3}
   - {fileID: 8300000, guid: a58b7705d3649084481e24f6c0ea4c84, type: 3}
   scene: 0
-<<<<<<< HEAD
 --- !u!82 &6038604829840926803
 AudioSource:
-=======
---- !u!114 &4772335262824300573
-MonoBehaviour:
->>>>>>> 05030f341a9e2603c0eab6cb2757c8955c965d44
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1008766931}
   m_Enabled: 1
-<<<<<<< HEAD
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 810a13ddf318be440ae15630501a47b4, type: 3}
@@ -733,13 +723,6 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-=======
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a436dbc3f4de9ce448ecaeeafd52ced4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  multitly: 1
->>>>>>> 05030f341a9e2603c0eab6cb2757c8955c965d44
 --- !u!1 &1081920424
 GameObject:
   m_ObjectHideFlags: 0
