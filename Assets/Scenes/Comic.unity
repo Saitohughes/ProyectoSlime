@@ -2539,7 +2539,7 @@ GameObject:
   - component: {fileID: 857657843}
   m_Layer: 0
   m_Name: VFX Manager
-  m_TagString: Untagged
+  m_TagString: VFX
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2568,7 +2568,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 8cdbf60c82d37cd4f855d893fae46389, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -3642,7 +3642,7 @@ GameObject:
   - component: {fileID: 1116547407}
   m_Layer: 0
   m_Name: Music Manager
-  m_TagString: Untagged
+  m_TagString: Music
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6106,8 +6106,7 @@ MonoBehaviour:
   shop: {fileID: 0}
   time: 0.8
   delay: 0.2
-  mySoure: {fileID: 857657843}
-  pastPage: {fileID: 8300000, guid: 8cdbf60c82d37cd4f855d893fae46389, type: 3}
+  mySource: {fileID: 857657843}
 --- !u!4 &2138309434
 Transform:
   m_ObjectHideFlags: 0
