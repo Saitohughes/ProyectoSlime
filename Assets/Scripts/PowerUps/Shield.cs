@@ -20,6 +20,10 @@ public class Shield : MonoBehaviour
             instance = this;
         }
     }
+    private void Start()
+    {
+        
+    }
     private void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.CompareTag("Vision") || 

@@ -76,7 +76,10 @@ public class GameController : MonoBehaviour
     }
    public void SkipMovement(float velocity = 2)
     {
+        Debug.Log("se multiplico la velocidad");
+
         Time.timeScale = velocity;
+       
     }
  
     public void Timer()

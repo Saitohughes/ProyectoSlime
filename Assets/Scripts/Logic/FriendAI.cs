@@ -11,7 +11,7 @@ public class FriendAI : MonoBehaviour
 
     [SerializeField] bool mylife, win;
 
-    [SerializeField] GameObject confetti;
+    [SerializeField] GameObject confetti,shield;
 
     [SerializeField] Transform targetSafe;
     [SerializeField] Transform myself;
@@ -31,11 +31,15 @@ public class FriendAI : MonoBehaviour
         targetSafe = GameObject.FindGameObjectWithTag("Exit").GetComponent<Transform>();
         mySource = GetComponent<AudioSource>();
     }
-
+  
     // Update is called once per frame
     void Update()
     {
-        
+        if (GetComponent<Shield>() != null)
+            shield.SetActive(true);
+        else
+            shield.SetActive(false);
+
         if (state == 0) // idle
         {
             pathFinder.target = targetGuard;
