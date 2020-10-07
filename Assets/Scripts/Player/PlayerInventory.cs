@@ -43,4 +43,11 @@ public class PlayerInventory : MonoBehaviour
         inventory[1] = PlayerPrefs.GetInt("smInventory");
         inventory[2] = PlayerPrefs.GetInt("gmInventory");
     }
+    public void Actualice()
+    {
+        PlayerPrefs.SetInt("myMoney",MyMoney);
+        PlayerPrefs.SetInt("mtInventory",Inventory[0]);
+        PlayerPrefs.SetInt("smInventory", Inventory[1]);
+        PlayerPrefs.SetInt("gmInventory", Inventory[2]);
+    }
 }
