@@ -21,7 +21,7 @@ public class ShopManager : MonoBehaviour
 
     public void Awake()
     {
-        Actualize();
+        Actualice();
     }
 
     public void Update()
@@ -39,7 +39,7 @@ public class ShopManager : MonoBehaviour
         }
     }
 
-    public void Actualize()
+    public void Actualice()
     {
         myInventory = FindObjectOfType<PlayerInventory>();
         myMoney.text = myInventory.MyMoney.ToString();
@@ -49,6 +49,7 @@ public class ShopManager : MonoBehaviour
             priceTxt[i].text = price[i].ToString();
             inventory[i].text = ("x" + myInventory.Inventory[i]);
         }
+        myInventory.Actualice();
     }
 
     public void Buy(int handicapSelected)
@@ -58,7 +59,7 @@ public class ShopManager : MonoBehaviour
             myInventory.MyMoney -= price[handicapSelected];
             myInventory.Inventory[handicapSelected] += 1;
 
-            Actualize();
+            Actualice();
 
             mySource.PlayOneShot(buyItem);
         }
