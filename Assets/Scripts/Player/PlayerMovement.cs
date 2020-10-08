@@ -50,6 +50,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void ChangeSpeed(float changeSpeed = 5.5f)
     {
+        
         speed = changeSpeed;
         CanHead(false);
     }
