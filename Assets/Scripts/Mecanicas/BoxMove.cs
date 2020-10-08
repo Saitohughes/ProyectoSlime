@@ -36,7 +36,7 @@ public class BoxMove : MonoBehaviour
         if (player != null)
         {
             gameObject.transform.parent = player.transform;
-            playerMov.ChangeSpeed();
+            PlayerMovement.Instance.ChangeSpeed();
             gameObject.layer = 10;
             grab = true;
 
@@ -49,7 +49,7 @@ public class BoxMove : MonoBehaviour
     {
         //GetComponentInParent<PlayerController>().ChangeAcction(false);
         gameObject.transform.parent = null;
-        playerMov.RestoreSpeed();
+        PlayerMovement.Instance.RestoreSpeed();
         gameObject.layer = 11;
         grab=false;
         mySource.Stop();

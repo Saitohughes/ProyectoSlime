@@ -65,11 +65,6 @@ public class PlayerMovement : MonoBehaviour
         horizontal = joystick.Horizontal;
         vertical = joystick.Vertical;
 
-#if UNITY_EDITOR
-        horizontal = Input.GetAxis("Horizontal");
-        vertical = Input.GetAxis("Vertical"); 
-#endif
-
         mov = new Vector3(horizontal, 0, vertical); //le damos el valor al vector con respecto a las direcciones
         Vector3 rightMovement = right * speed * Time.deltaTime * horizontal;
         Vector3 forwardMovement = forward * speed * Time.deltaTime * vertical;
@@ -82,12 +77,8 @@ public class PlayerMovement : MonoBehaviour
             transform.forward = heading; 
         }
 
-       
-
         transform.position += rightMovement;
         transform.position += forwardMovement;
-
-
 
         if (mov.magnitude > 0)
         {
