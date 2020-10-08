@@ -43,7 +43,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
    
  
-    void FixedUpdate()
+    void Update()
     {
         Movement();
     }
@@ -61,9 +61,14 @@ public class PlayerMovement : MonoBehaviour
 
     void Movement()
     {
+
         horizontal = joystick.Horizontal;
         vertical = joystick.Vertical;
 
+#if UNITY_EDITOR
+        horizontal = Input.GetAxis("Horizontal");
+        vertical = Input.GetAxis("Vertical"); 
+#endif
 
         mov = new Vector3(horizontal, 0, vertical); //le damos el valor al vector con respecto a las direcciones
         Vector3 rightMovement = right * speed * Time.deltaTime * horizontal;
