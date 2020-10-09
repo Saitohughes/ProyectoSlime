@@ -164,7 +164,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: d989f25df45be7a41b679b5ebc4c1056, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.2
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -11155,7 +11155,10 @@ MonoBehaviour:
   shop: {fileID: 1282817286}
   time: 0.25
   delay: 0.1
+  storyCounter: 0
   mySource: {fileID: 105623219}
+  changePage: {fileID: 8300000, guid: 8cdbf60c82d37cd4f855d893fae46389, type: 3}
+  storyClips: []
 --- !u!1 &1817248647
 GameObject:
   m_ObjectHideFlags: 0

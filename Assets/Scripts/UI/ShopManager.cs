@@ -65,7 +65,7 @@ public class ShopManager : MonoBehaviour
         }
         else
         {
-            mySource.PlayOneShot(cantBuy, 0.2f);
+            mySource.PlayOneShot(cantBuy, 0.5f);
         }
     }
 }

@@ -8,7 +8,12 @@ public class UILogic : MonoBehaviour
 {
     [SerializeField] RectTransform main, world_T, world_1, world_2,shop;
     [SerializeField] float time, delay;
+    [SerializeField] int storyCounter;
+
     [SerializeField] AudioSource mySource;
+    [SerializeField] AudioClip changePage;
+    [SerializeField] AudioClip[] storyClips;
+
     public void MoveWorld_T(int world)
     {
         if(world == 0)
@@ -51,7 +56,7 @@ public class UILogic : MonoBehaviour
     void MoveUI(RectTransform rectTransform,Vector2 position,float moveTime,float delay,Ease ease)
     {
         rectTransform.DOAnchorPos(position, moveTime).SetDelay(delay).SetEase(ease);
-        mySource.Play();
+        mySource.PlayOneShot(changePage);
     }
     public void MoveShop(int world)
     {
@@ -70,9 +75,20 @@ public class UILogic : MonoBehaviour
     public void ChangePage(RectTransform rect)
     {
         MoveUI(rect, new Vector2(1920, 0), time, delay, Ease.InBack);
+        storyCounter += 1;
+        if(storyClips.Length != 0)
+            Invoke("StoryTell", 1.2f);
     }
     public void BackPage(RectTransform rect)
     {
         MoveUI(rect, new Vector2(0, 0), time, delay, Ease.InBack);
+        storyCounter -= 1;
+        if (storyClips.Length != 0)
+            Invoke("StoryTell", 1.2f);
+    }
+
+    public void StoryTell()
+    {
+        mySource.PlayOneShot(storyClips[storyCounter]);
     }
 }

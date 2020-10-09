@@ -158,7 +158,7 @@ public class GameController : MonoBehaviour
         GetCash.Instance.CashValue(true);
 
         myMusic.Stop();
-        mySource.PlayOneShot(myClips[1],0.5f);
+        mySource.PlayOneShot(myClips[1], 1f);
     }
     public void Lost()
     {
