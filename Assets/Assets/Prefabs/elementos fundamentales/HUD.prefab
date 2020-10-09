@@ -1530,7 +1530,10 @@ MonoBehaviour:
   shop: {fileID: 0}
   time: 0
   delay: 0
+  storyCounter: 0
   mySource: {fileID: 0}
+  changePage: {fileID: 0}
+  storyClips: []
 --- !u!114 &7824362497223525067
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2406,7 +2409,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Latest money:'
+  m_text: 'Current money:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
@@ -2475,7 +2478,7 @@ MonoBehaviour:
   m_margin: {x: -221.00372, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 4428572459700549770}
-    characterCount: 13
+    characterCount: 14
     spriteCount: 0
     spaceCount: 1
     wordCount: 2
@@ -8252,7 +8255,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'current Money:'
+  m_text: 'Total Money:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
