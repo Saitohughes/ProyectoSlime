@@ -25,8 +25,8 @@ public class PlayerInventory : MonoBehaviour
         DontDestroyOnLoad(gameObject);
 
 #if UNITY_EDITOR
-        //PlayerPrefs.SetInt("myMoney", 0);
-        //PlayerPrefs.SetInt("myMoney", MyMoney);
+        PlayerPrefs.SetInt("myMoney", 0);
+        PlayerPrefs.SetInt("myMoney", MyMoney);
 
         PlayerPrefs.SetInt("mtInventory", 0);
         PlayerPrefs.SetInt("mtInventory", inventory[0]);

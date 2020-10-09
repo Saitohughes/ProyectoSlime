@@ -49,6 +49,7 @@ public class SpendPowerUp : MonoBehaviour
     {
         
         myInventory.Inventory[handicapSelected] -= 1;
+        myInventory.Actualice();
         Actualize();
         if (handicapSelected == 0)
         {
