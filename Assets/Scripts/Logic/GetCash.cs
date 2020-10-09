@@ -34,6 +34,7 @@ public class GetCash : MonoBehaviour
             Cash = (50 + (int)GameController.Instance.WardTime) * multitly;
         }
         PlayerInventory.instance.MyMoney += Cash;
+        PlayerInventory.instance.Actualice();
         ScoreManager.Instance.ShowCash();
     }
     public void ChangeMultitly() 
