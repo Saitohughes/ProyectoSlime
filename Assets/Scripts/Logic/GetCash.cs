@@ -30,12 +30,12 @@ public class GetCash : MonoBehaviour
     {
         if (winOfail)
         {
-            LastCash = PlayerInventory.instance.MyMoney;
+            LastCash = PlayerInventory.Instance.MyMoney;
             Cash = (50 + (int)GameController.Instance.WardTime) * multitly;
         }
-        PlayerInventory.instance.MyMoney += Cash;
-        PlayerInventory.instance.Actualice();
+        PlayerInventory.Instance.MyMoney += Cash;
         ScoreManager.Instance.ShowCash();
+        PlayerInventory.Instance.Actualice();
     }
     public void ChangeMultitly() 
     {

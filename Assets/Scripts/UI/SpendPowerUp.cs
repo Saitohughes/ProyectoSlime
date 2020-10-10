@@ -37,19 +37,19 @@ public class SpendPowerUp : MonoBehaviour
     public void Actualize()
     {
         count = 0;
-        myInventory = FindObjectOfType<PlayerInventory>();
+        //myInventory = FindObjectOfType<PlayerInventory>();
 
-        for (int i = 0; i < myInventory.Inventory.Length; i++)
+        for (int i = 0; i < PlayerInventory.Instance.Inventory.Length; i++)
         {
-            inventory[i].text = ("x" + myInventory.Inventory[i]);
+            inventory[i].text = ("x" + PlayerInventory.Instance.Inventory[i]);
         }
     }
 
     public void UseHandicap(int handicapSelected)
     {
-        
-        myInventory.Inventory[handicapSelected] -= 1;
-        myInventory.Actualice();
+
+        PlayerInventory.Instance.Inventory[handicapSelected] -= 1;
+        PlayerInventory.Instance.Actualice();
         Actualize();
         if (handicapSelected == 0)
         {

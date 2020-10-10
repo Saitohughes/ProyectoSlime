@@ -19,7 +19,8 @@ public class ShopManager : MonoBehaviour
     [SerializeField] private AudioSource mySource;
     [SerializeField] private AudioClip buyItem, cantBuy;
 
-    public void Awake()
+ 
+    private void Start()
     {
         Actualice();
     }
@@ -28,7 +29,7 @@ public class ShopManager : MonoBehaviour
     {
         for (int i = 0; i < priceTxt.Length; i++)
         {
-            if(myInventory.MyMoney >= price[i])
+            if(PlayerInventory.Instance.MyMoney >= price[i])
             {
                 priceTxt[i].color = Color.white;
             }
@@ -41,23 +42,23 @@ public class ShopManager : MonoBehaviour
 
     public void Actualice()
     {
-        myInventory = FindObjectOfType<PlayerInventory>();
-        myMoney.text = myInventory.MyMoney.ToString();
+        //myInventory = FindObjectOfType<PlayerInventory>();
+        myMoney.text = PlayerInventory.Instance.MyMoney.ToString();
 
-        for (int i = 0; i < myInventory.Inventory.Length; i++)
+        for (int i = 0; i < PlayerInventory.Instance.Inventory.Length; i++)
         {
             priceTxt[i].text = price[i].ToString();
-            inventory[i].text = ("x" + myInventory.Inventory[i]);
+            inventory[i].text = ("x" + PlayerInventory.Instance.Inventory[i]);
         }
-        myInventory.Actualice();
+        PlayerInventory.Instance.Actualice();
     }
 
     public void Buy(int handicapSelected)
     {
-        if (myInventory.MyMoney >= price[handicapSelected])
+        if (PlayerInventory.Instance.MyMoney >= price[handicapSelected])
         {
-            myInventory.MyMoney -= price[handicapSelected];
-            myInventory.Inventory[handicapSelected] += 1;
+            PlayerInventory.Instance.MyMoney -= price[handicapSelected];
+            PlayerInventory.Instance.Inventory[handicapSelected] += 1;
 
             Actualice();
 
