@@ -25,8 +25,8 @@ public class PlayerInventory : MonoBehaviour
         DontDestroyOnLoad(gameObject);
 
 #if UNITY_EDITOR
-        PlayerPrefs.SetInt("myMoney", 0);
-        PlayerPrefs.SetInt("myMoney", MyMoney);
+        //PlayerPrefs.SetInt("myMoney", 0);
+        //PlayerPrefs.SetInt("myMoney", MyMoney);
 
         PlayerPrefs.SetInt("mtInventory", 0);
         PlayerPrefs.SetInt("mtInventory", inventory[0]);
@@ -37,17 +37,19 @@ public class PlayerInventory : MonoBehaviour
         PlayerPrefs.SetInt("gmInventory", 0);
         PlayerPrefs.SetInt("gmInventory", inventory[2]);
 #endif
-
         MyMoney = PlayerPrefs.GetInt("myMoney");
+
         inventory[0] = PlayerPrefs.GetInt("mtInventory");
         inventory[1] = PlayerPrefs.GetInt("smInventory");
         inventory[2] = PlayerPrefs.GetInt("gmInventory");
+
+        Debug.Log(PlayerPrefs.GetInt("myMoney"));
     }
     public void Actualice()
     {
-        PlayerPrefs.SetInt("myMoney",MyMoney);
-        PlayerPrefs.SetInt("mtInventory",Inventory[0]);
-        PlayerPrefs.SetInt("smInventory", Inventory[1]);
-        PlayerPrefs.SetInt("gmInventory", Inventory[2]);
+        PlayerPrefs.SetInt("myMoney", myMoney);
+        PlayerPrefs.SetInt("mtInventory", inventory[0]);
+        PlayerPrefs.SetInt("smInventory", inventory[1]);
+        PlayerPrefs.SetInt("gmInventory", inventory[2]);
     }
 }
