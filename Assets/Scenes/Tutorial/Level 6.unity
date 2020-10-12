@@ -3988,6 +3988,23 @@ PrefabInstance:
       propertyPath: time
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 834549589579305602, guid: 97968a2a34181df4f9cc01ce1f2c7d33,
+        type: 3}
+      propertyPath: m_VideoClip
+      value: 
+      objectReference: {fileID: 32900000, guid: 838eaea7e6691484598a37e065a9702e,
+        type: 3}
+    - target: {fileID: 834549589579305602, guid: 97968a2a34181df4f9cc01ce1f2c7d33,
+        type: 3}
+      propertyPath: m_WaitForFirstFrame
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2881685914646684429, guid: 97968a2a34181df4f9cc01ce1f2c7d33,
+        type: 3}
+      propertyPath: m_text
+      value: Attract the enemy making noise with the saucepan, pressing the action
+        button
+      objectReference: {fileID: 0}
     - target: {fileID: 2937945482937636669, guid: 97968a2a34181df4f9cc01ce1f2c7d33,
         type: 3}
       propertyPath: m_text

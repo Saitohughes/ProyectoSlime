@@ -3917,6 +3917,17 @@ PrefabInstance:
       propertyPath: time
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 834549589579305602, guid: 97968a2a34181df4f9cc01ce1f2c7d33,
+        type: 3}
+      propertyPath: m_VideoClip
+      value: 
+      objectReference: {fileID: 32900000, guid: df7fe4c3b6a9b6149bacb0b0fbb6a98a,
+        type: 3}
+    - target: {fileID: 2881685914646684429, guid: 97968a2a34181df4f9cc01ce1f2c7d33,
+        type: 3}
+      propertyPath: m_text
+      value: Melt the box by holding the action button for 3 seconds.
+      objectReference: {fileID: 0}
     - target: {fileID: 2937945482937636669, guid: 97968a2a34181df4f9cc01ce1f2c7d33,
         type: 3}
       propertyPath: m_text

@@ -9009,6 +9009,17 @@ PrefabInstance:
       propertyPath: time
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 834549589579305602, guid: 97968a2a34181df4f9cc01ce1f2c7d33,
+        type: 3}
+      propertyPath: m_VideoClip
+      value: 
+      objectReference: {fileID: 32900000, guid: 7df234fc8adcf9747ac524f0179712a9,
+        type: 3}
+    - target: {fileID: 2881685914646684429, guid: 97968a2a34181df4f9cc01ce1f2c7d33,
+        type: 3}
+      propertyPath: m_text
+      value: Drag the box to cover the enemy's vision
+      objectReference: {fileID: 0}
     - target: {fileID: 4077948006350905058, guid: 97968a2a34181df4f9cc01ce1f2c7d33,
         type: 3}
       propertyPath: mySource
@@ -27197,7 +27208,8 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 10
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7411551039756097447, guid: d4a8a0ab57405ac4592a54b6ab75fd15, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d4a8a0ab57405ac4592a54b6ab75fd15, type: 3}
 --- !u!4 &1232701190 stripped
 Transform:
