@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 276b5b35778fb4044a97cf4932325162
+guid: d3e59cbb7a758a94ea44ef59e4f1a873
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7390973218554841658
-    second: GreedMode_0
-  - first:
-      213: 1354988288772259827
-    second: GreedMode_1
+      213: -4761595191641241809
+    second: ComicIcon_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -105,13 +102,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: GreedMode_0
+      name: ComicIcon_0
       rect:
         serializedVersion: 2
-        x: 516
-        y: 512
-        width: 4
-        height: 8
+        x: 172
+        y: 30
+        width: 1523
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,29 +116,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6c5fc9b440dfd6990800000000000000
-      internalID: -7390973218554841658
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GreedMode_1
-      rect:
-        serializedVersion: 2
-        x: 536
-        y: 12
-        width: 872
-        height: 1017
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3ffb51b6ba2edc210800000000000000
-      internalID: 1354988288772259827
+      spriteID: f270406b66a6bedb0800000000000000
+      internalID: -4761595191641241809
       vertices: []
       indices: 
       edges: []
@@ -149,7 +125,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 53aaa52846c64b0458b7a52cf5afb3f7
+    spriteID: 0d0f0edd997825346a5a5e7683c4b90c
     internalID: 0
     vertices: []
     indices: 

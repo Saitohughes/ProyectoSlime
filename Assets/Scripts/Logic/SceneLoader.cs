@@ -38,4 +38,23 @@ public class SceneLoader : MonoBehaviour
     {
         SceneManager.LoadScene("Main Menu");
     }
+
+    public void DefaultButton()
+    {
+        if (PlayerValidator.Instance.Count == 0)
+            GoComic();
+        else if (PlayerValidator.Instance.Count == 1)
+            BackMenu();
+    }
+    public void PlayButton()
+    {
+        if (PlayerValidator.Instance.Count == 0)
+        {
+            SceneManager.LoadScene("Level 1");
+            PlayerValidator.Instance.ChangeValidator();
+        }
+        else if (PlayerValidator.Instance.Count == 1)
+            BackMenu();
+                
+    }
 }

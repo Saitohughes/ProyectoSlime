@@ -9,6 +9,7 @@ public class LevelManager : MonoBehaviour
 {
     [SerializeField] Button[] buttons;
     [SerializeField] int currentLevels, unlockLevels;
+    [SerializeField] GameObject complete1, complete2, complete3;
     
      //LevelCount mycounter;
     // Start is called before the first frame update
@@ -34,6 +35,16 @@ public class LevelManager : MonoBehaviour
         {
             buttons[i].interactable = true;
         }
+
+        if (unlockLevels >= 8)
+            complete1.SetActive(true);
+
+        if (unlockLevels >= 14)
+            complete2.SetActive(true);
+
+        if (unlockLevels >= 19)
+            complete3.SetActive(true);
+
     }
     public void ChangeLevel(int level = 0)
     {
