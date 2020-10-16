@@ -10,11 +10,11 @@ using UnityEngine.SceneManagement;
 public class GameController : MonoBehaviour
 {
     [SerializeField] FriendAI friend;
-    [SerializeField] GameObject win, lost,hud;
+    [SerializeField] GameObject win, lost, hud, pause;
     [SerializeField] TextMeshProUGUI timeCount;
     [SerializeField] List<GameObject> enemys;
     [SerializeField] float timeStart, time;
-    [SerializeField] bool go = false, oneTime, start;
+    [SerializeField] bool go = false, oneTime, start, isPaused;
     [SerializeField] Button skipVelocity;
     PlayerMovement myMov;
 
@@ -174,6 +174,20 @@ public class GameController : MonoBehaviour
         timeStart += 30f; 
     }
 
-     
+    public void PauseGame()
+    {
+        if (!isPaused)
+        {
+            Time.timeScale = 0;
+            pause.SetActive(true);
+            isPaused = true;
+        }
+        else if (isPaused)
+        {
+            Time.timeScale = 1;
+            pause.SetActive(false);
+            isPaused = false;
+        }
+    }
 }
 
