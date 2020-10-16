@@ -14,7 +14,7 @@ public class SpendPowerUp : MonoBehaviour
 
     public void Awake()
     {
-        Actualize();
+        Actualice();
         hud.SetActive(false);
         Time.timeScale = 0;
 
@@ -34,7 +34,7 @@ public class SpendPowerUp : MonoBehaviour
     }
 
 
-    public void Actualize()
+    public void Actualice()
     {
         count = 0;
         //myInventory = FindObjectOfType<PlayerInventory>();
@@ -50,7 +50,7 @@ public class SpendPowerUp : MonoBehaviour
 
         PlayerInventory.Instance.Inventory[handicapSelected] -= 1;
         PlayerInventory.Instance.Actualice();
-        Actualize();
+        Actualice();
         if (handicapSelected == 0)
         {
             GameController.Instance.TimerPowerUp();

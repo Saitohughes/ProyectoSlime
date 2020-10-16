@@ -50,8 +50,9 @@ public class SceneLoader : MonoBehaviour
     {
         if (PlayerValidator.Instance.Count == 0)
         {
-            SceneManager.LoadScene("Level 1");
             PlayerValidator.Instance.ChangeValidator();
+            SceneManager.LoadScene("Level 1");
+            
         }
         else if (PlayerValidator.Instance.Count == 1)
             BackMenu();
