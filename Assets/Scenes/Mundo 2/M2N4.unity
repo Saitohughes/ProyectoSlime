@@ -9802,6 +9802,7 @@ Transform:
   - {fileID: 1740766739}
   - {fileID: 414686815}
   - {fileID: 1057579548}
+  - {fileID: 1727086337}
   - {fileID: 82194093}
   - {fileID: 683781611}
   - {fileID: 1445744463}
@@ -9815,7 +9816,6 @@ Transform:
   - {fileID: 478669718}
   - {fileID: 757275857}
   - {fileID: 1202286665}
-  - {fileID: 1727086337}
   - {fileID: 84376701}
   - {fileID: 722382248}
   - {fileID: 540635231}
@@ -53333,7 +53333,7 @@ Transform:
   m_LocalScale: {x: 1.0065025, y: 1.01028, z: 2.0110433}
   m_Children: []
   m_Father: {fileID: 321710449}
-  m_RootOrder: 188
+  m_RootOrder: 175
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1727086338
 BoxCollider:
@@ -67356,7 +67356,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1181910530, guid: 97968a2a34181df4f9cc01ce1f2c7d33, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2937945482937636669, guid: 97968a2a34181df4f9cc01ce1f2c7d33,
         type: 3}
@@ -67407,6 +67407,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5556534818310328622, guid: 97968a2a34181df4f9cc01ce1f2c7d33,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1695000965}
+    - target: {fileID: 5556534818310328622, guid: 97968a2a34181df4f9cc01ce1f2c7d33,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BackMenu
       objectReference: {fileID: 0}
     - target: {fileID: 6271107218091466400, guid: 97968a2a34181df4f9cc01ce1f2c7d33,
         type: 3}
@@ -67563,6 +67573,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8786273413398473600, guid: 97968a2a34181df4f9cc01ce1f2c7d33,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1695000965}
+    - target: {fileID: 8786273413398473600, guid: 97968a2a34181df4f9cc01ce1f2c7d33,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Restart
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97968a2a34181df4f9cc01ce1f2c7d33, type: 3}
