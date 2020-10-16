@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System;
 
 public class SpendPowerUp : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI[] inventory;
-    [SerializeField] private PlayerInventory myInventory;
     [SerializeField] GameObject hud;
     [SerializeField] GameObject friend;
-    private int count;
+    [SerializeField] private int count;
 
-    public void Awake()
+    public void Start()
     {
         Actualice();
         hud.SetActive(false);
@@ -20,9 +20,10 @@ public class SpendPowerUp : MonoBehaviour
 
         for (int i = 0; i < inventory.Length; i++)
         {
-            if (myInventory.Inventory[i] <= 0)
+            if (PlayerInventory.Instance.Inventory[i] == 0)
             {
                 count += 1;
+                Debug.Log("entre al contador");
             }
         }
 
@@ -37,6 +38,7 @@ public class SpendPowerUp : MonoBehaviour
     public void Actualice()
     {
         count = 0;
+        Debug.Log(PlayerInventory.Instance.Inventory.Length);
         //myInventory = FindObjectOfType<PlayerInventory>();
 
         for (int i = 0; i < PlayerInventory.Instance.Inventory.Length; i++)

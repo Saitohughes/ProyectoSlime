@@ -15,6 +15,7 @@ public class PlayerInventory : MonoBehaviour
 
     private void Awake()
     {
+       
         if (instance != null)
         {
             Destroy(gameObject);
@@ -24,6 +25,7 @@ public class PlayerInventory : MonoBehaviour
             instance = this;
         }
         DontDestroyOnLoad(gameObject);
+       
 
 #if UNITY_EDITOR
         PlayerPrefs.SetInt("playerMoney", 0);

@@ -23,10 +23,7 @@ public class Shield : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.CompareTag("Vision") || 
-            collision.gameObject.CompareTag("Enemy") || 
-            collision.gameObject.CompareTag("Box") || 
-            collision.gameObject.CompareTag("Pit"))
+        if(collision.gameObject.layer == 9 && collision.gameObject.tag != "Metal")
         {
             collision.gameObject.SetActive(false);
             DestroyMe();
