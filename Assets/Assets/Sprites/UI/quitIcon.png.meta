@@ -105,10 +105,10 @@ TextureImporter:
       name: quitIcon_0
       rect:
         serializedVersion: 2
-        x: 536
-        y: 108
-        width: 857
-        height: 845
+        x: 378
+        y: 32
+        width: 1129
+        height: 1027
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -125,7 +125,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 6844833b714ac2043acd4cb590faa498
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
