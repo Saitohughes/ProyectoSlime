@@ -248,14 +248,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 355943b9cfed4a74f8e796966ba5b0b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  state: 0
   mylife: 0
   win: 0
   confetti: {fileID: 4215762408104712725}
   shield: {fileID: 158939204934239312}
-  targetSafe: {fileID: 0}
-  myself: {fileID: 217246975788207123}
-  targetGuard: {fileID: 3852997889985791407}
 --- !u!54 &8301737386372739085
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2863,14 +2859,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 355943b9cfed4a74f8e796966ba5b0b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  state: 0
   mylife: 0
   win: 0
   confetti: {fileID: 4617448328371795380}
   shield: {fileID: 3901295475555449875}
-  targetSafe: {fileID: 0}
-  myself: {fileID: 6315623232738688857}
-  targetGuard: {fileID: 3852997889985791407}
 --- !u!195 &2510656726047964330
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -3789,14 +3781,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 355943b9cfed4a74f8e796966ba5b0b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  state: 0
   mylife: 0
   win: 0
   confetti: {fileID: 5525281896272981443}
   shield: {fileID: 134656489593967140}
-  targetSafe: {fileID: 0}
-  myself: {fileID: 9052375282073064974}
-  targetGuard: {fileID: 3852997889985791407}
 --- !u!54 &5724021207951286250
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4412,7 +4400,7 @@ PrefabInstance:
     - target: {fileID: 5165393197613498236, guid: ce5f74f574c0a9d46ac13bc7f442721c,
         type: 3}
       propertyPath: m_Name
-      value: Effect4
+      value: Comfetti2
       objectReference: {fileID: 0}
     - target: {fileID: 5165393197613498236, guid: ce5f74f574c0a9d46ac13bc7f442721c,
         type: 3}
@@ -4513,7 +4501,7 @@ PrefabInstance:
     - target: {fileID: 5165393197613498236, guid: ce5f74f574c0a9d46ac13bc7f442721c,
         type: 3}
       propertyPath: m_Name
-      value: Effect4
+      value: Comfetti1
       objectReference: {fileID: 0}
     - target: {fileID: 5165393197613498236, guid: ce5f74f574c0a9d46ac13bc7f442721c,
         type: 3}
@@ -4715,6 +4703,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5165393197613498236, guid: db6201d33a4d61348bda371611324be5,
+        type: 3}
+      propertyPath: m_TagString
+      value: Shield
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db6201d33a4d61348bda371611324be5, type: 3}
 --- !u!4 &158939204934239341 stripped
@@ -4830,6 +4823,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5165393197613498236, guid: db6201d33a4d61348bda371611324be5,
+        type: 3}
+      propertyPath: m_TagString
+      value: Shield
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db6201d33a4d61348bda371611324be5, type: 3}
@@ -4962,6 +4960,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5165393197613498236, guid: db6201d33a4d61348bda371611324be5,
+        type: 3}
+      propertyPath: m_TagString
+      value: Shield
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db6201d33a4d61348bda371611324be5, type: 3}
 --- !u!4 &3901295475555449902 stripped
@@ -5056,7 +5059,7 @@ PrefabInstance:
     - target: {fileID: 5165393197613498236, guid: ce5f74f574c0a9d46ac13bc7f442721c,
         type: 3}
       propertyPath: m_Name
-      value: Effect4
+      value: Comfetti
       objectReference: {fileID: 0}
     - target: {fileID: 5165393197613498236, guid: ce5f74f574c0a9d46ac13bc7f442721c,
         type: 3}

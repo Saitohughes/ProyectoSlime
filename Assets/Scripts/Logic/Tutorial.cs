@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Tutorial : MonoBehaviour
 {
-    [SerializeField] GameObject tutorial;
-    [SerializeField] bool hiden;
+    [SerializeField] private GameObject tutorial;
+    [SerializeField] private bool hiden;
     // Start is called before the first frame update
     void Start()
     {

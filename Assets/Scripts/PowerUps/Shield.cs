@@ -8,7 +8,6 @@ public class Shield : MonoBehaviour
 
     public static Shield Instance { get => instance; }
 
-
     private void Awake()
     {
         if (instance != null)
@@ -19,6 +18,7 @@ public class Shield : MonoBehaviour
         {
             instance = this;
         }
+       
     }
 
     private void OnCollisionEnter(Collision collision)

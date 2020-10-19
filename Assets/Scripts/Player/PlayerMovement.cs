@@ -10,26 +10,27 @@ public class PlayerMovement : MonoBehaviour
     public static PlayerMovement instance;
     public static PlayerMovement Instance { get => instance; }
 
-    [SerializeField] float speed, originalSpeed, horizontal, vertical; //variabñle que va a controlar la velocidad del personaje
-    [SerializeField] Rigidbody myRig; //componente necesaria
-    Animator myAnim;
-    [SerializeField] bool canHead = true;
-    public Joystick joystick;
-    AudioSource mySource;
+    [SerializeField] private float speed, originalSpeed, horizontal, vertical; //variabñle que va a controlar la velocidad del personaje
+    private  Animator myAnim;
+    [SerializeField] private bool canHead = true;
+    private Joystick joystick;
+    private AudioSource mySource;
 
     Vector3 mov,forward,right; //vector de movimiento
   
     // Start is called before the first frame update
     private void Awake()
     {
-
+        //Proceso del singleton
         if (instance != null)
         {
             Destroy(this);
         }
         instance = this;
+       
+        joystick = FindObjectOfType<FixedJoystick>();
+
         originalSpeed = speed;
-        myRig =gameObject.GetComponent<Rigidbody>(); //Se define el valor de la componente que vamos a modificar 
         myAnim = GetComponentInChildren<Animator>();
         mySource = gameObject.GetComponent<AudioSource>();
         forward = Camera.main.transform.forward;

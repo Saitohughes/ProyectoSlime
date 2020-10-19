@@ -5,12 +5,12 @@ using DG.Tweening;
 
 public class MetalBox : MonoBehaviour
 {
-    [SerializeField] ParticleSystem melt;
-    [SerializeField] GameObject visualmelt;
-    [SerializeField] GameObject boxBody;
+    [SerializeField] private ParticleSystem melt;
+    [SerializeField] private GameObject visualmelt;
+    [SerializeField] private GameObject boxBody;
 
     public Ease moveEase = Ease.Linear;
-    [SerializeField] float time;
+    [SerializeField] private float time;
     [Range(1f, 0.5f)] public float scale;
 
 

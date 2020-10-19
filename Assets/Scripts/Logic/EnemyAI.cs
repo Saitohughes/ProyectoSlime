@@ -2,52 +2,27 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyAI : MonoBehaviour
+public class EnemyAI : IA
 {
     [SerializeField] GameObject vision;
-    [SerializeField] int state = 0; //0 Guard, 1 Exit
-    [SerializeField] Transform target;
-    [SerializeField] Transform targetGuard;
+     AudioSource mySource;
+    //public override void Awake()
+    //{
+    //    pathFinder=GetComponent<PathFinder>();
+    //}
 
-
-    PathFinder pathFinder;
-    Animator animator;
-    AudioSource mySource;
-
-
-    void Awake()
+    private void Start()
     {
-        pathFinder = GetComponent<PathFinder>();
-        //animator = GetComponent<Animator>();
         mySource = GetComponent<AudioSource>();
     }
-
     // Update is called once per frame
-    void Update()
+    public override void ChangeTransform(Transform target)
     {
 
-        if (state == 0) // dejeme solo
-        {
-            pathFinder.target = targetGuard;
-
-        }
-        else if (state == 1) // follow
-        {
-
-            pathFinder.target = target;
-
-        }
-
-    }
-
-    /// <summary>
-    /// Modificador de estados
-    /// </summary>
-    /// <param name="NewState">0 guarida, 1 objetivo,</param>
-    public void StateModification(int NewState) // modifica los estados, desde otros lugares
-    {
-        state = NewState;
+        pathFinder.target = target;
         vision.SetActive(false);
         mySource.Play();
     }
+
+    
 }

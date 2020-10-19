@@ -9,19 +9,20 @@ using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
-    [SerializeField] FriendAI friend;
-    [SerializeField] GameObject win, lost, hud, pause;
-    [SerializeField] TextMeshProUGUI timeCount;
-    [SerializeField] List<GameObject> enemys;
-    [SerializeField] float timeStart, time;
-    [SerializeField] bool go = false, oneTime, start, isPaused;
+     private FriendAI friend;
+    [SerializeField] private GameObject win, lost, hud, pause;
+    [SerializeField] private TextMeshProUGUI timeCount;
+    [SerializeField] private List<GameObject> enemys;
+    [SerializeField] private float timeStart, time;
+    [SerializeField] private bool go = false, oneTime, start, isPaused;
     [SerializeField] Button skipVelocity;
-    PlayerMovement myMov;
+    private Transform exitTransform;
+    private PlayerMovement myMov;
 
-    AudioSource mySource, myMusic;
-    [SerializeField] AudioClip[] myClips;
+    private AudioSource mySource, myMusic;
+    [SerializeField] private AudioClip[] myClips;
     
-    [SerializeField] int scene;
+    [SerializeField] private int scene;
 
     public static GameController instance;
 
@@ -38,6 +39,7 @@ public class GameController : MonoBehaviour
         {
             instance = this;
         }
+        exitTransform = GameObject.FindGameObjectWithTag("Exit").GetComponent<Transform>();
         myMov = FindObjectOfType<PlayerMovement>();
         scene = SceneManager.GetActiveScene().buildIndex;
         mySource = gameObject.GetComponent<AudioSource>();
@@ -62,7 +64,7 @@ public class GameController : MonoBehaviour
     {
         if (oneTime == false)
         {
-            friend.StateModification(1);
+            friend.ChangeTransform(exitTransform);
             PuzzleActive();
             go = true;
             oneTime = true;
@@ -133,19 +135,9 @@ public class GameController : MonoBehaviour
     void Update()
     {
         if (timeStart > 0 || go)
-        {   
+        {
             Timer();
         }
-       /* if (Input.GetKey(KeyCode.R))
-        {
-            StartButtom();
-        }*/
-        /*
-        if (Input.GetKey(KeyCode.E))
-        {
-            PuzzleActive();
-        }
-        */
     }
 
     public void Win()

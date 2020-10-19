@@ -6,11 +6,11 @@ using UnityEngine;
 public class BoxMove : MonoBehaviour
 {
     // Start is called before the first frame update
-    PlayerMovement playerMov;
-    BoxCollider myCollider;
-    [SerializeField] bool grab = false;
-    [SerializeField] GameObject help;
-    AudioSource mySource;
+    private PlayerMovement playerMov;
+    private BoxCollider myCollider;
+    [SerializeField] private bool grab = false;
+    [SerializeField] private GameObject help;
+    private AudioSource mySource;
     
     private void Awake()
     {

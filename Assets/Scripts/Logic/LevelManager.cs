@@ -7,9 +7,9 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
-    [SerializeField] Button[] buttons;
-    [SerializeField] int currentLevels, unlockLevels;
-    [SerializeField] GameObject complete1, complete2, complete3;
+    [SerializeField] private Button[] buttons;
+    [SerializeField] private int currentLevels, unlockLevels;
+    [SerializeField] private GameObject complete1, complete2, complete3;
     
      //LevelCount mycounter;
     // Start is called before the first frame update

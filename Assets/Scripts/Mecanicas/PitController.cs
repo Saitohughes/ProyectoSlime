@@ -6,8 +6,8 @@ using UnityEngine.UIElements;
 public class PitController : MonoBehaviour
 {
     // Start is called before the first frame update
-    [SerializeField] GameObject boxField, deathFloor;
-    Collider myCol;
+    [SerializeField] private GameObject boxField, deathFloor;
+    private Collider myCol;
     private void Awake()
     {
         myCol = GetComponent<Collider>();

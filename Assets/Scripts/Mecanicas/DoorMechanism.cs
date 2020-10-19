@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class DoorMechanism : MonoBehaviour
 {
-    [SerializeField] Transform myTransform,minHigh,actualhigh; //par amedir el movimiento tanto de la puerta como hacia donde lo pondremos
-    bool descending, releasing; //comfirmamos que se realice el desplazamiento
+    [SerializeField] private Transform myTransform,minHigh,actualhigh; //par amedir el movimiento tanto de la puerta como hacia donde lo pondremos
+    private bool descending, releasing; //comfirmamos que se realice el desplazamiento
 
-    AudioSource mySource;
+    private AudioSource mySource;
 
     // Start is called before the first frame update
     private void Awake()

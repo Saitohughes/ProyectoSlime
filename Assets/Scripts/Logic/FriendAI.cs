@@ -3,35 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class FriendAI : MonoBehaviour
+public class FriendAI : IA
 {
-    GameController myController;
-
-    [SerializeField] int state = 0; //0 Guard, 1 Exit
-
     [SerializeField] bool mylife, win;
 
     [SerializeField] GameObject confetti,shield;
-
-    [SerializeField] Transform targetSafe;
-    [SerializeField] Transform myself;
-    [SerializeField] Transform targetGuard;
-    
-
-    PathFinder pathFinder;
     Animator animator;
     AudioSource mySource;
 
-    void Awake()
+     public override void Awake()
     {
         mylife = true;
-        myController = FindObjectOfType<GameController>();
         pathFinder = GetComponent<PathFinder>();
         animator = GetComponent<Animator>();
-        targetSafe = GameObject.FindGameObjectWithTag("Exit").GetComponent<Transform>();
         mySource = GetComponent<AudioSource>();
     }
-  
+
     // Update is called once per frame
     void Update()
     {
@@ -39,39 +26,19 @@ public class FriendAI : MonoBehaviour
             shield.SetActive(true);
         else
             shield.SetActive(false);
-
-        if (state == 0) // idle
-        {
-            pathFinder.target = targetGuard;
-            if (mySource.isPlaying)
-                mySource.Stop();
-        }
-        else if (state == 1) // follow
-        {
-            if(!mySource.isPlaying)
-                mySource.Play();
-
-            pathFinder.target = targetSafe;
-            animator.SetBool("Move", true);
-
-        }
-        else if (state == 2) //Dead
-        {
-            pathFinder.target = myself;
-            animator.SetBool("Move", false);
-            if (mySource.isPlaying)
-                mySource.Stop();
-        }
-
     }
-
-    /// <summary>
-    /// Modificador de estados
-    /// </summary>
-    /// <param name="NewState">0 guarida, 1 objetivo, 2 muerto</param>
-    public void StateModification(int NewState) // modifica los estados, desde otros lugares
+    public override void ChangeTransform(Transform target)
     {
-        state = NewState;
+        pathFinder.target = target;
+        mySource.Play();
+
+        if(target != gameObject.transform)
+            animator.SetBool("Move", true);
+        else
+            animator.SetBool("Move", false);
+        
+        if (mySource.isPlaying)
+            mySource.Stop();
     }
 
     public bool Stop()
@@ -83,8 +50,8 @@ public class FriendAI : MonoBehaviour
         if (gameObject.GetComponent<Shield>() == null)
         {
             mylife = false;
-            StateModification(2);
-            myController.GameOver(Stop());
+            ChangeTransform(gameObject.transform);
+            GameController.Instance.GameOver(Stop());
         }
         else
         {
@@ -93,10 +60,10 @@ public class FriendAI : MonoBehaviour
     }
     public void Win()
     {
-        StateModification(2);
+        ChangeTransform(gameObject.transform);
         confetti.SetActive(true);
-        myController.GameOver(Stop());
-        
+        GameController.Instance.GameOver(Stop());
+
     }
     
     private void OnCollisionEnter(Collision collision)

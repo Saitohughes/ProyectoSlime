@@ -5,7 +5,7 @@ using UnityEngine;
 public class LevelCount : MonoBehaviour
 {
     // Start is called before the first frame update
-    [SerializeField] int mycount;
+    [SerializeField] private int mycount;
 
     public static LevelCount instance;
 

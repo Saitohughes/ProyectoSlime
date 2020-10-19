@@ -8,16 +8,14 @@ using UnityEngine.UIElements;
 public class PlayerController : MonoBehaviour
 {
    
-    GameController myController;
+    
 
-    [SerializeField] string instruction;
-    [SerializeField] float time;
-    [SerializeField] GameObject interact,armature;
-    [SerializeField] float meltTime;
-    [SerializeField] bool mylife, see;
-    [SerializeField] AudioSource mySource;
-    [SerializeField] AudioClip[] myClips;
-    PlayerMovement myMov;
+    [SerializeField] private string instruction;
+    [SerializeField] private float time,meltTime;
+    [SerializeField] private GameObject interact,armature;
+    [SerializeField] private bool mylife, see;
+    [SerializeField] private AudioSource mySource;
+    [SerializeField] private AudioClip[] myClips;
     private int count;
     public static PlayerController instance;
     public static PlayerController Instance { get => instance; }
@@ -33,7 +31,6 @@ public class PlayerController : MonoBehaviour
         }
 
         instance = this;
-        myMov = GetComponent<PlayerMovement>();
         mySource = GameObject.FindGameObjectWithTag("VFX").GetComponent<AudioSource>();
         
     }
@@ -41,7 +38,7 @@ public class PlayerController : MonoBehaviour
     {
         see = false;
         mylife = true;
-        myController = FindObjectOfType<GameController>();
+      
         instruction = "Null";
         time = 0;
 
@@ -60,7 +57,7 @@ public class PlayerController : MonoBehaviour
             if (instruction.Equals("Box") && interact != null)
             { 
                 Debug.Log("sali");
-                myMov.CanHead(true);
+                PlayerMovement.Instance.CanHead(true);
                 interact.GetComponent<BoxMove>().NoGrab();
                 instruction = "Null";
             }
@@ -193,13 +190,6 @@ public class PlayerController : MonoBehaviour
         
     }
 
-  /*  public void OnRotate(float RotationPosition = 0)
-    {
-        armature.transform.localRotation = Quaternion.Euler( new Vector3(0, RotationPosition, 0));
-
-    }
-  */
-
     public void TrueAction()
     {
         acction = true;
@@ -213,7 +203,7 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.tag == "DeathFloor")
         {
             mylife = false;
-            myController.GameOver(mylife);
+            GameController.instance.GameOver(mylife);
         }
     }
     public void ChangeAcction(bool action)

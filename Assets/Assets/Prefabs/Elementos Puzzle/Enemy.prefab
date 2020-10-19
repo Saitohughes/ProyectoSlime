@@ -520,9 +520,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vision: {fileID: 8350207017385556562}
-  state: 0
-  target: {fileID: 8350207019372293452}
-  targetGuard: {fileID: 8350207017532734043}
 --- !u!82 &8931962727022460578
 AudioSource:
   m_ObjectHideFlags: 0
@@ -761,8 +758,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: defecece47541e249b80e4ca10b1c32c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  guard: {fileID: 8350207018198818362}
   effect: {fileID: 5816535032762735886}
+  guard: {fileID: 8350207018198818362}
 --- !u!1001 &971258429282879101
 PrefabInstance:
   m_ObjectHideFlags: 0

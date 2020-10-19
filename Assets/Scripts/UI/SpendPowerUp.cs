@@ -8,9 +8,9 @@ using System;
 public class SpendPowerUp : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI[] inventory;
-    [SerializeField] GameObject hud;
-    [SerializeField] GameObject friend;
+    [SerializeField] private GameObject hud,friend;
     [SerializeField] private int count;
+    [SerializeField] private GameObject[] powerUpIcons;
 
     public void Start()
     {
@@ -23,7 +23,6 @@ public class SpendPowerUp : MonoBehaviour
             if (PlayerInventory.Instance.Inventory[i] == 0)
             {
                 count += 1;
-                Debug.Log("entre al contador");
             }
         }
 
@@ -65,7 +64,8 @@ public class SpendPowerUp : MonoBehaviour
         {
             GetCash.Instance.ChangeMultitly();
         }
-
+        
+        powerUpIcons[handicapSelected].SetActive(true);
         Close();
     }
 

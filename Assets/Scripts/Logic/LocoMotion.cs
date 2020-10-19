@@ -7,10 +7,10 @@ using UnityEngine.AI;
 [RequireComponent(typeof(Animator))]
 public class LocoMotion : MonoBehaviour
 {
-    NavMeshAgent agent;
-    Animator animator;
-    Vector2 SmoothDeltaPosition = Vector2.zero;
-    Vector2 velocity= Vector2.zero;
+   private NavMeshAgent agent;
+   private Animator animator;
+   private Vector2 SmoothDeltaPosition = Vector2.zero;
+   private Vector2 velocity= Vector2.zero;
     
     void Start()
     {
@@ -33,11 +33,6 @@ public class LocoMotion : MonoBehaviour
         velocity = deltaPosition / Time.deltaTime;
 
         bool shouldMove = velocity.magnitude > 0.5f && agent.remainingDistance > agent.radius;
-        //animator.SetBool("Move", shouldMove);
-        //animator.SetFloat("turn", velocity.x);
-        //animator.SetFloat("speed", velocity.y);
-
-        //GetComponent<LookAt>().lookAtTargetPosition = agent.steeringTarget + transform.forward;
 
     }
     void OnAnimatorMove()

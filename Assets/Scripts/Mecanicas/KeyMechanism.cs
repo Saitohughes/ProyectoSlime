@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class KeyMechanism : MonoBehaviour
 {
-    [SerializeField] DoorMechanism myDoor;
+    [SerializeField] private DoorMechanism myDoor;
 
     private void Awake()
     {
