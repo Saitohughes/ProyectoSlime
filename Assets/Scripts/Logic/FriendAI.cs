@@ -15,6 +15,7 @@ public class FriendAI : IA
     {
         mylife = true;
         pathFinder = GetComponent<PathFinder>();
+        pathFinder.target = gameObject.transform;
         animator = GetComponent<Animator>();
         mySource = GetComponent<AudioSource>();
     }
