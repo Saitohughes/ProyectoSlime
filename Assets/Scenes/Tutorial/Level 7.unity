@@ -13765,6 +13765,11 @@ PrefabInstance:
       propertyPath: m_text
       value: Drag the box to cover the enemy's vision
       objectReference: {fileID: 0}
+    - target: {fileID: 3258399665743306948, guid: 97968a2a34181df4f9cc01ce1f2c7d33,
+        type: 3}
+      propertyPath: m_Texture
+      value: 
+      objectReference: {fileID: 8400000, guid: 9b160e8b76b4ac743a5da304e4f2e91c, type: 2}
     - target: {fileID: 4077948006350905058, guid: 97968a2a34181df4f9cc01ce1f2c7d33,
         type: 3}
       propertyPath: mySource
