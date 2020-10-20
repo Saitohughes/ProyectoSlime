@@ -812,6 +812,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 32900000, guid: d722dade09eaa284ba92796f53d85851,
         type: 3}
+    - target: {fileID: 834549589579305602, guid: 97968a2a34181df4f9cc01ce1f2c7d33,
+        type: 3}
+      propertyPath: m_TargetTexture
+      value: 
+      objectReference: {fileID: 8400000, guid: f44a0231faabf8c47a92471fab4f6e16, type: 2}
     - target: {fileID: 2881685914646684429, guid: 97968a2a34181df4f9cc01ce1f2c7d33,
         type: 3}
       propertyPath: m_text

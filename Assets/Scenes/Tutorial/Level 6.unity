@@ -6474,6 +6474,11 @@ PrefabInstance:
       propertyPath: m_WaitForFirstFrame
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 834549589579305602, guid: 97968a2a34181df4f9cc01ce1f2c7d33,
+        type: 3}
+      propertyPath: m_TargetTexture
+      value: 
+      objectReference: {fileID: 8400000, guid: c02e3b61fcf9ec541a146faffbc7e982, type: 2}
     - target: {fileID: 2881685914646684429, guid: 97968a2a34181df4f9cc01ce1f2c7d33,
         type: 3}
       propertyPath: m_text
