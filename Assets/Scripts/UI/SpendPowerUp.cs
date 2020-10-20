@@ -49,24 +49,27 @@ public class SpendPowerUp : MonoBehaviour
     public void UseHandicap(int handicapSelected)
     {
 
-        PlayerInventory.Instance.Inventory[handicapSelected] -= 1;
-        PlayerInventory.Instance.Actualice();
-        Actualice();
-        if (handicapSelected == 0)
+        if (PlayerInventory.Instance.Inventory[handicapSelected] > 0)
         {
-            GameController.Instance.TimerPowerUp();
+            PlayerInventory.Instance.Inventory[handicapSelected] -= 1;
+            PlayerInventory.Instance.Actualice();
+            Actualice();
+            if (handicapSelected == 0)
+            {
+                GameController.Instance.TimerPowerUp();
+            }
+            else if (handicapSelected == 1)
+            {
+                friend.AddComponent<Shield>();
+            }
+            else if (handicapSelected == 2)
+            {
+                GetCash.Instance.ChangeMultitly();
+            }
+
+            powerUpIcons[handicapSelected].SetActive(true);
+            Close(); 
         }
-        else if(handicapSelected == 1)
-        {
-            friend.AddComponent<Shield>();
-        }
-        else if(handicapSelected == 2)
-        {
-            GetCash.Instance.ChangeMultitly();
-        }
-        
-        powerUpIcons[handicapSelected].SetActive(true);
-        Close();
     }
 
     public void Close()

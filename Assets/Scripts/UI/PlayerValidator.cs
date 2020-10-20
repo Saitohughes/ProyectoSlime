@@ -18,7 +18,7 @@ public class PlayerValidator : MonoBehaviour
 #endif
         if (instance != null)
         {
-            Destroy(this);
+            Destroy(gameObject);
         }
 
         instance = this;
