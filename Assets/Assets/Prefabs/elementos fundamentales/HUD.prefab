@@ -621,7 +621,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5050525881b9df4fac745d2477270d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  friend: {fileID: 0}
   win: {fileID: 2610807244805105383}
   lost: {fileID: 1266299253518503844}
   hud: {fileID: 6271107219099224283}
