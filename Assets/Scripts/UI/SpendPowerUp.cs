@@ -37,7 +37,7 @@ public class SpendPowerUp : MonoBehaviour
     public void Actualice()
     {
         count = 0;
-        Debug.Log(PlayerInventory.Instance.Inventory.Length);
+        //Debug.Log(PlayerInventory.Instance.Inventory.Length);
         //myInventory = FindObjectOfType<PlayerInventory>();
 
         for (int i = 0; i < PlayerInventory.Instance.Inventory.Length; i++)
