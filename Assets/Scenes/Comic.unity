@@ -5059,7 +5059,7 @@ MonoBehaviour:
   changePage: {fileID: 8300000, guid: 8cdbf60c82d37cd4f855d893fae46389, type: 3}
   storyClips:
   - {fileID: 8300000, guid: 653a4be16dab85a4ca4d8ce33cb3b774, type: 3}
-  - {fileID: 8300000, guid: a223808ec06aa8641b05bf24ec92e6fb, type: 3}
+  - {fileID: 8300000, guid: 902ec084d93bbc64386437f8f684b073, type: 3}
   - {fileID: 8300000, guid: 49ce66d70a523154e97becc3fa206f2a, type: 3}
   - {fileID: 8300000, guid: ffc6e04bd70856a4b9a0403ea19ec3c6, type: 3}
   - {fileID: 8300000, guid: 4dead15ffd6ba434abf12d06a9dc80dd, type: 3}

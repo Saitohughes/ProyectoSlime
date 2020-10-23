@@ -636,8 +636,8 @@ MonoBehaviour:
   skipVelocity: {fileID: 4342381978978069081}
   myClips:
   - {fileID: 8300000, guid: e01923b8a62d549499900d9647ffa98d, type: 3}
-  - {fileID: 8300000, guid: 756370be967c622429c6aaf632879e6d, type: 3}
-  - {fileID: 8300000, guid: a58b7705d3649084481e24f6c0ea4c84, type: 3}
+  - {fileID: 8300000, guid: f16b58d73413fb14b99eaea56b8ccee2, type: 3}
+  - {fileID: 8300000, guid: 0b1897761e0166f4fb8af55686443626, type: 3}
   scene: 0
 --- !u!82 &6038604829840926803
 AudioSource:

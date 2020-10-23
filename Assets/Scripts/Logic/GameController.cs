@@ -72,7 +72,9 @@ public class GameController : MonoBehaviour
             skipVelocity.gameObject.SetActive(true);
 
             mySource.Stop();
+            mySource.volume = 1f;
             mySource.PlayOneShot(myClips[0]);
+            mySource.volume = 0.01f;
         }
 
     }
@@ -143,7 +145,12 @@ public class GameController : MonoBehaviour
     public void Win()
     {
         win.SetActive(true);
-        if(LevelCount.Instance.Mycount < scene)
+
+        myMusic.Stop();
+        mySource.volume = 0.5f;
+        mySource.PlayOneShot(myClips[1], 1f);
+
+        if (LevelCount.Instance.Mycount < scene)
             LevelCount.Instance.UpdateCount();
         hud.SetActive(false);
         myMov.ChangeSpeed(0);
@@ -154,12 +161,15 @@ public class GameController : MonoBehaviour
     }
     public void Lost()
     {
+        myMusic.Stop();
+        mySource.volume = 0.5f;
+        mySource.PlayOneShot(myClips[2], 1f);
+
         lost.SetActive(true);
         hud.SetActive(false);
         myMov.ChangeSpeed(0);
 
-        myMusic.Stop();
-        mySource.PlayOneShot(myClips[2], 1f);
+
     }
     public void TimerPowerUp()
     {
