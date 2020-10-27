@@ -9777,13 +9777,13 @@ Transform:
   - {fileID: 1420800310}
   - {fileID: 1077877179}
   - {fileID: 2069188497}
-  - {fileID: 1727086337}
   - {fileID: 127502840}
   - {fileID: 339804225}
   - {fileID: 148110592}
   - {fileID: 254706949}
   - {fileID: 1957534680}
   - {fileID: 227691730}
+  - {fileID: 1727086337}
   - {fileID: 293771261}
   - {fileID: 582005812}
   - {fileID: 926995678}
@@ -53333,7 +53333,7 @@ Transform:
   m_LocalScale: {x: 1.0065025, y: 1.01028, z: 2.0110433}
   m_Children: []
   m_Father: {fileID: 321710449}
-  m_RootOrder: 150
+  m_RootOrder: 156
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1727086338
 BoxCollider:
@@ -67588,11 +67588,6 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7692392579232692191, guid: 97968a2a34181df4f9cc01ce1f2c7d33,
-        type: 3}
-      propertyPath: mySource
-      value: 
-      objectReference: {fileID: 138247478}
     - target: {fileID: 8786273413398473600, guid: 97968a2a34181df4f9cc01ce1f2c7d33,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

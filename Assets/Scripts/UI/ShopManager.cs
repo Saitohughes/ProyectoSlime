@@ -19,12 +19,10 @@ public class ShopManager : MonoBehaviour
     [SerializeField] private AudioSource mySource;
     [SerializeField] private AudioClip buyItem, cantBuy;
 
-
-
+ 
     private void Start()
     {
         Actualice();
-
     }
 
     public void Update()

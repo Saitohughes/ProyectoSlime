@@ -33,12 +33,7 @@ public class SpendPowerUp : MonoBehaviour
         friend = GameObject.FindGameObjectWithTag("Friend");
     }
 
-    private void Update()
-    {
-        inventory[0].text = ("x" + PlayerInventory.Instance.Inventory[0]);
-        inventory[1].text = ("x" + PlayerInventory.Instance.Inventory[1]);
-        inventory[2].text = ("x" + PlayerInventory.Instance.Inventory[2]);
-    }
+
     public void Actualice()
     {
         count = 0;
