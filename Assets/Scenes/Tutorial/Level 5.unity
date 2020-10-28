@@ -817,6 +817,11 @@ PrefabInstance:
       propertyPath: m_TargetTexture
       value: 
       objectReference: {fileID: 8400000, guid: f44a0231faabf8c47a92471fab4f6e16, type: 2}
+    - target: {fileID: 1266299253518503844, guid: 97968a2a34181df4f9cc01ce1f2c7d33,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2881685914646684429, guid: 97968a2a34181df4f9cc01ce1f2c7d33,
         type: 3}
       propertyPath: m_text
@@ -1081,7 +1086,7 @@ PrefabInstance:
     - target: {fileID: 6271107219666429601, guid: 97968a2a34181df4f9cc01ce1f2c7d33,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7606259684222037236, guid: 97968a2a34181df4f9cc01ce1f2c7d33,
         type: 3}

@@ -164,7 +164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 183a7d95d0fd23940a792eea7a17eecd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mycount: 15
+  mycount: 0
 --- !u!1 &212594925
 GameObject:
   m_ObjectHideFlags: 0
@@ -1505,7 +1505,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d5f5c6b41be5d643ac1b3053a0991b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myMoney: 200
+  myMoney: 0
   inventory: 000000000000000000000000
 --- !u!4 &2089244902
 Transform:
