@@ -6177,6 +6177,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d9d27fead3925546af81d9d2536d134, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shop: {fileID: 1149721448}
   myInventory: {fileID: 0}
   myMoney: {fileID: 64318321}
   price: 640000006400000064000000
@@ -9441,7 +9442,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 1149721449}
   m_OnClick:
     m_PersistentCalls:

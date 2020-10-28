@@ -7,6 +7,7 @@ using TMPro;
 public class ShopManager : MonoBehaviour
 {
     [Header("Componentes de la Tienda")]
+    [SerializeField] private Button shop;
     [SerializeField] private PlayerInventory myInventory;
     [SerializeField] private TextMeshProUGUI myMoney;
 
@@ -24,7 +25,13 @@ public class ShopManager : MonoBehaviour
     private void Start()
     {
         Actualice();
-
+        if (shop != null)
+        {
+            if (LevelCount.Instance.Mycount > 7)
+            {
+                shop.interactable = true;
+            }
+        }
     }
 
     public void Update()
